@@ -1,0 +1,211 @@
+{
+  "url": "https://joselinekopplin-del.github.io/idera5s-energy-lab/",
+  "checkedAt": "2026-11-05T07:32:19.883Z",
+  "browser": "156.0.4314.58",
+  "errors": [],
+  "httpErrors": [],
+  "checks": [
+    "HTTPS homepage, real GLB and hardware WebGL",
+    "Mouse orbit, wheel zoom, paint and view controls",
+    "Verified JSON, infeasible winter marker, playback and synchronized charts",
+    "Four-strategy analysis loaded from HTTPS data",
+    "All four hash routes survive reload",
+    "Mobile layout, low LOD and touch paint selection"
+  ],
+  "readyMs": 4261.5999999940395,
+  "desktop": {
+    "ready": true,
+    "quality": "standard",
+    "loadMs": 628.4000000059605,
+    "frameMsMedian": 16.699999999999818,
+    "fps": 59.88023952095874,
+    "frameCount": 38,
+    "drawCalls": 40,
+    "triangles": 143881,
+    "geometries": 55,
+    "textures": 4,
+    "programs": 6,
+    "camera": [
+      7.500000000000003,
+      8.499999999999995,
+      3.6999999999999984
+    ],
+    "target": [
+      0,
+      0,
+      0.7199999999999995
+    ],
+    "auto": false,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      1264,
+      420
+    ],
+    "dpr": 1,
+    "settings": {
+      "color": "gold",
+      "lights": "drl",
+      "shell": "solid",
+      "explode": 0,
+      "auto": false,
+      "studio": "light",
+      "quality": "auto",
+      "view": "front45",
+      "reset": 0,
+      "flow": true
+    },
+    "wheels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "flows": [
+      {
+        "from": "fuel",
+        "to": "engine",
+        "visible": false
+      },
+      {
+        "from": "engine",
+        "to": "gear",
+        "visible": false
+      },
+      {
+        "from": "battery",
+        "to": "motor",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "motor",
+        "to": "gear",
+        "visible": false
+      },
+      {
+        "from": "battery",
+        "to": "aux",
+        "visible": false
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FL",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FR",
+        "power": 0,
+        "visible": false
+      }
+    ],
+    "heap": 23265577
+  },
+  "mobile": {
+    "ready": true,
+    "quality": "low",
+    "loadMs": 547.2999999821186,
+    "frameMsMedian": 16.700000000000045,
+    "fps": 59.88023952095792,
+    "frameCount": 37,
+    "drawCalls": 35,
+    "triangles": 53601,
+    "geometries": 52,
+    "textures": 4,
+    "programs": 6,
+    "camera": [
+      7.500000000000003,
+      8.499999999999995,
+      3.6999999999999984
+    ],
+    "target": [
+      0,
+      0,
+      0.7199999999999995
+    ],
+    "auto": false,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      356,
+      350
+    ],
+    "dpr": 1,
+    "settings": {
+      "color": "gold",
+      "lights": "drl",
+      "shell": "solid",
+      "explode": 0,
+      "auto": false,
+      "studio": "light",
+      "quality": "auto",
+      "view": "front45",
+      "reset": 0,
+      "flow": true
+    },
+    "wheels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "flows": [
+      {
+        "from": "fuel",
+        "to": "engine",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "engine",
+        "to": "gear",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "battery",
+        "to": "motor",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "motor",
+        "to": "gear",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "battery",
+        "to": "aux",
+        "power": 400,
+        "visible": false
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FL",
+        "power": 0,
+        "visible": false
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FR",
+        "power": 0,
+        "visible": false
+      }
+    ],
+    "heap": 16347348
+  },
+  "resources": [
+    {
+      "name": "https://joselinekopplin-del.github.io/idera5s-energy-lab/models/vehicle-standard.glb",
+      "durationMs": 17.69999998807907,
+      "transferBytes": 0
+    },
+    {
+      "name": "https://joselinekopplin-del.github.io/idera5s-energy-lab/data/catalog.json",
+      "durationMs": 4.299999982118607,
+      "transferBytes": 0
+    }
+  ],
+  "passed": true
+}

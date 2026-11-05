@@ -2,6 +2,10 @@
 
 **Interactive Vehicle Energy Management Simulator**
 
+**在线演示：[ID.ERA 5S Energy Lab](https://joselinekopplin-del.github.io/idera5s-energy-lab/)**
+
+2026-11-05 已完成 GitHub Actions 发布与 HTTPS 实测。模型、数据回放、策略曲线、手机布局和四个页面刷新通过，未出现资源HTTP错误或页面运行异常。验收见 [线上部署记录](docs/deployment.md)、[浏览器功能测试](docs/browser-validation.md) 和 [性能实测](docs/performance.md)。
+
 React + TypeScript + Vite + Three.js 构建的独立汽车能源管理研究平台。包含可旋转的原创 Neo 三维近似、五种车漆、摄影棚材质、部件拆解、真实 MATLAB 保存结果回放和四策略对比。界面采用统一 Material Design 3 风格的颜色、排版、状态、导航和明暗主题。
 
 这是**离线结果的浏览器回放**，不是在线 MATLAB 求解器。全部 16 工况 × 4 策略、64 组正式结果及其中 3 组动力不可行结果均保留。参考速度和参考里程不代表动力不足时车辆实际达到的运动轨迹。
