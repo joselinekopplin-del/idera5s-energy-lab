@@ -105,7 +105,7 @@ Remove-Item Env:ENERGY_PERF
 
 桌面 50–60 FPS、普通笔记本至少 30 FPS 是目标；是否达到以具体设备和实测报告为准。有限时长的资源稳定性检查只能排查观察窗口内的持续增长，不能证明不存在所有内存泄漏。
 
-本机功能验收结果为 12 项通过、0 失败，详见 [浏览器功能验收](docs/browser-validation.md) 及 [机器可读证据](docs/browser-validation.json)。持续性能与线上发布应另外验证，不能把功能通过数当作性能或实车外观精度结论。
+本机功能验收结果为 15 项通过、0 失败、0 跳过（使用 `--grep-invert 'long saved-result'` 明确排除独立性能用例），详见 [浏览器功能验收](docs/browser-validation.md) 及 [机器可读证据](docs/browser-validation.json)。其中新增核对了暂停切LOD的车轮状态、停机/待机/发动机充电语义与由保存燃油量差分得到的L/h。持续性能与线上发布应另外验证，不能把功能通过数当作性能或实车外观精度结论。
 
 ## GitHub Pages 发布
 

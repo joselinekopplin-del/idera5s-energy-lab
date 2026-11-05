@@ -1,7 +1,8 @@
 {
-  "date": "2026-11-05T07:01:47.731Z",
-  "command": "pnpm test:browser",
+  "date": "2026-11-05T07:09:56.979Z",
+  "command": "pnpm test:browser --grep-invert 'long saved-result'",
   "browserChannel": "msedge",
+  "browserVersion": "156.0.4314.58",
   "headless": true,
   "desktopViewport": [
     1440,
@@ -12,98 +13,110 @@
     844
   ],
   "stats": {
-    "startTime": "2026-11-05T07:01:47.731Z",
-    "duration": 30559.397999999997,
-    "expected": 12,
-    "skipped": 1,
+    "startTime": "2026-11-05T07:09:56.979Z",
+    "duration": 35285.605,
+    "expected": 15,
+    "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   },
   "tests": [
     {
-      "title": "long saved-result playback records FPS and bounded GPU resources",
+      "title": "paused nonzero reference distance preserves all wheel angles across all LOD replacements",
       "project": "desktop",
-      "status": "skipped",
-      "duration_ms": 413
+      "status": "passed",
+      "duration_ms": 3683
+    },
+    {
+      "title": "zero-power motor is standby, stopped-engine ratio is unavailable, and DC-bus guidance is explicit",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1639
+    },
+    {
+      "title": "engine charging is distinguished from braking and sampled fuel flow matches immutable saved volumes",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 2154
     },
     {
       "title": "homepage loads real GLB and lazily requests only one saved result",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 1712
+      "duration_ms": 1869
     },
     {
       "title": "real mouse drag rotates, wheel zooms and pointer interaction stops autorotation",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 3156
+      "duration_ms": 3090
     },
     {
       "title": "five paints, five lamp states, studio and all preset views change actual renderer state",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 1764
+      "duration_ms": 1729
     },
     {
       "title": "light, dark and system themes, keyboard focus and help dialog work",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 1906
+      "duration_ms": 1726
     },
     {
       "title": "shell, exploded parts and actual raycast selection display saved component values",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 3065
+      "duration_ms": 2845
     },
     {
       "title": "saved braking playback, wheel motion, reversed recovery arrows and synchronized chart cursors",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 2139
+      "duration_ms": 2122
     },
     {
       "title": "three infeasible winter strategies remain marked and ECMS remains feasible",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 1782
+      "duration_ms": 1345
     },
     {
       "title": "strategy analysis loads all four real runs, switches charts and can reopen a chosen replay",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 1974
+      "duration_ms": 1748
     },
     {
       "title": "hash routes survive refresh and requested local resources return no HTTP errors",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 2549
+      "duration_ms": 2399
     },
     {
       "title": "LOD switches stabilize GPU geometry and texture counts without growing each cycle",
       "project": "desktop",
       "status": "passed",
-      "duration_ms": 3009
+      "duration_ms": 2903
     },
     {
       "title": "mobile layout, genuine touch orbit and two-finger pinch, low LOD and replay controls",
       "project": "mobile-touch",
       "status": "passed",
-      "duration_ms": 2774
+      "duration_ms": 2593
     },
     {
       "title": "reduced-motion preference disables automatic rotation",
       "project": "mobile-touch",
       "status": "passed",
-      "duration_ms": 1452
+      "duration_ms": 1378
     }
   ],
   "initial": {
     "quality": "standard",
-    "loadMs": 98.80000001192093,
-    "fps": 59.52380952380968,
-    "frameCount": 13,
+    "loadMs": 90.7999999821186,
+    "fps": 59.88023952095833,
+    "frameCount": 73,
     "drawCalls": 40,
     "triangles": 143881,
     "geometries": 55,
@@ -115,13 +128,13 @@
     ],
     "dpr": 1,
     "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-    "heap": 31783174
+    "heap": 35453186
   },
   "lodCycles": [
     {
       "quality": "high",
-      "loadMs": 48,
-      "fps": 59.88023952095813,
+      "loadMs": 35.900000005960464,
+      "fps": 59.88023952095792,
       "frameCount": 42,
       "drawCalls": 40,
       "triangles": 311182,
@@ -134,13 +147,13 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 54379410
+      "heap": 50971830
     },
     {
       "quality": "low",
-      "loadMs": 15.199999988079071,
-      "fps": 59.88023952095833,
-      "frameCount": 59,
+      "loadMs": 11.199999988079071,
+      "fps": 59.88023952095792,
+      "frameCount": 58,
       "drawCalls": 35,
       "triangles": 53601,
       "geometries": 52,
@@ -152,13 +165,13 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 59441527
+      "heap": 56014607
     },
     {
       "quality": "standard",
-      "loadMs": 16.099999994039536,
+      "loadMs": 14.900000005960464,
       "fps": 59.88023952095792,
-      "frameCount": 76,
+      "frameCount": 75,
       "drawCalls": 40,
       "triangles": 143881,
       "geometries": 55,
@@ -170,13 +183,13 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 65574500
+      "heap": 61138800
     },
     {
       "quality": "high",
-      "loadMs": 22.900000005960464,
+      "loadMs": 23.30000001192093,
       "fps": 59.88023952095792,
-      "frameCount": 99,
+      "frameCount": 94,
       "drawCalls": 40,
       "triangles": 311182,
       "geometries": 55,
@@ -188,13 +201,13 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 90253831
+      "heap": 87132353
     },
     {
       "quality": "low",
-      "loadMs": 9.299999982118607,
-      "fps": 59.88023952095833,
-      "frameCount": 116,
+      "loadMs": 9.5,
+      "fps": 59.88023952095792,
+      "frameCount": 111,
       "drawCalls": 35,
       "triangles": 53601,
       "geometries": 52,
@@ -206,13 +219,13 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 50654719
+      "heap": 51788688
     },
     {
       "quality": "standard",
-      "loadMs": 14.300000011920929,
-      "fps": 59.88023952095833,
-      "frameCount": 134,
+      "loadMs": 15.699999988079071,
+      "fps": 59.88023952095813,
+      "frameCount": 128,
       "drawCalls": 40,
       "triangles": 143881,
       "geometries": 55,
@@ -224,14 +237,14 @@
       ],
       "dpr": 1,
       "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "heap": 54419232
+      "heap": 64241078
     }
   ],
   "mobileEmulation": {
     "quality": "low",
-    "loadMs": 87,
-    "fps": 59.88023952095874,
-    "frameCount": 74,
+    "loadMs": 70.10000002384186,
+    "fps": 59.88023952095792,
+    "frameCount": 66,
     "drawCalls": 35,
     "triangles": 53601,
     "geometries": 52,
@@ -243,12 +256,24 @@
     ],
     "dpr": 1,
     "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-    "heap": 25598044
+    "heap": 26215277
+  },
+  "scientificRegression": {
+    "pausedWheelDistanceTime_s": 30,
+    "engineChargingFixture": "braking_Rule_Based",
+    "engineChargingFixtureTime_s": 20,
+    "checks": [
+      "All four wheel angles survive high/low/standard LOD swaps while paused at nonzero reference distance.",
+      "Zero motor power displays standby; stopped-engine output/fuel ratio displays unavailable.",
+      "ModeCode=4 with negative motor power displays engine charging rather than braking recovery.",
+      "Sample FuelRate_Lh and displayed L/h equal the difference of immutable saved FuelUsed_L samples divided by their time interval.",
+      "Battery dialog explains DC-bus approximation, auxiliary demand and net battery power sign."
+    ]
   },
   "limits": [
     "Development server on localhost; not an online deployment verification.",
     "Short functional checks include video instrumentation; use a separate sustained run for performance conclusions.",
     "Mobile tests emulate touch and viewport on the desktop GPU; no physical phone was measured.",
-    "The 120-second sustained replay test is intentionally excluded from this functional suite."
+    "The 120-second sustained replay test is explicitly excluded, not counted as skipped."
   ]
 }

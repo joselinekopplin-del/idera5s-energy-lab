@@ -79,9 +79,15 @@ function rowAt(run: RunData | undefined, time: number): Sample {
     if ((run.rows[m][ti] ?? 0) <= time) l = m;
     else r = m - 1;
   }
-  return Object.fromEntries(
+  const sample = Object.fromEntries(
     run.fields.map((field, i) => [field, run.rows[l][i]]),
   );
+  const fuelIndex = run.fields.indexOf("FuelUsed_L");
+  const previousFuel = l > 0 ? run.rows[l - 1][fuelIndex] : 0;
+  const elapsed = l > 0 ? (sample.Time_s ?? 0) - (run.rows[l - 1][ti] ?? 0) : run.sampleInterval_s;
+  sample.FuelRate_Lh = sample.FuelUsed_L !== null && previousFuel !== null && elapsed > 0
+    ? (sample.FuelUsed_L - previousFuel) / elapsed * 3600 : null;
+  return sample;
 }
 function route() {
   return location.hash.replace("#/", "").split("?")[0] || "home";
@@ -1275,6 +1281,7 @@ export default function App() {
           <p className="fine-print">
             教学等效部件位置，不代表原厂内部布局。t = {fmt(sample.Time_s, 0)} s
           </p>
+          {part === "battery" && <p className="fine-print">能量流中的电池节点兼作直流母线示意；反向发电可能同时供给辅助负载，电池是否净充电请看电池功率的正负。</p>}
           <dl className="part-values">
             {(part === "battery"
               ? [
@@ -1288,7 +1295,8 @@ export default function App() {
                     ["输出功率", fmt((sample.Engine_W ?? 0) / 1000) + " kW"],
                     ["发动机转速", fmt(sample.EngineRPM, 0) + " rpm"],
                     ["燃油化学功率", fmt((sample.Fuel_W ?? 0) / 1000) + " kW"],
-                    ["效率", fmt((sample.EngineEta ?? 0) * 100) + " %"],
+                    ["采样燃油流量", fmt(sample.FuelRate_Lh, 2) + " L/h"],
+                    ["输出 / 燃油化学功率", (sample.Fuel_W ?? 0) > 0 ? fmt((sample.Engine_W ?? 0) / sample.Fuel_W! * 100) + " %" : "—（停机）"],
                   ]
                 : part === "motor"
                   ? [

@@ -1,6 +1,6 @@
 # 浏览器功能验收
 
-2026-11-05 在 Windows 本机以 Microsoft Edge headless 运行 `pnpm test:browser`。最终结果 **12 通过、0 失败、1 跳过**，耗时 30.6 秒。跳过项为明确独立运行的 120 秒长回放性能测试，不计入本功能通过数。机器可读结果见 [browser-validation.json](browser-validation.json)。
+2026-11-05 在 Windows 本机以 Microsoft Edge 156.0.4314.58 headless 运行 `pnpm test:browser --grep-invert 'long saved-result'`。最终结果 **15 通过、0 失败、0 跳过**，耗时 35.3 秒。120 秒长回放性能测试被明确排除在本功能套件外，不重复计入通过数或跳过数。机器可读结果见 [browser-validation.json](browser-validation.json)。
 
 桌面视口 1440 × 1000，DPR 1；移动仿真视口 390 × 844，触控开启、DPR 1。WebGL 实际渲染器为 NVIDIA GeForce RTX 5060 Laptop GPU / ANGLE Direct3D 11。测试浏览器没有禁用 GPU。
 
@@ -18,6 +18,9 @@
 | 刷新与资源路径 | 四条hash路由刷新、页面无异常、所请求资源无HTTP错误 | 通过 |
 | 三档LOD稳定性 | 高清→轻量→标准循环两次，几何/纹理数没有逐轮增长 | 通过 |
 | 移动交互与减少动态效果 | CDP真实单指/双指事件、手机宽度无溢出、触控播放、禁用自动旋转 | 通过 |
+| 暂停后的LOD状态保持 | 制动工况t=30秒已产生非零参考里程，切换高清/轻量/标准后四个车轮角度均等于原距离/radius | 通过 |
+| 零功率与停机科学语义 | 零电机功率显示“待机”，停机时输出/燃油功率比显示“—（停机）”，电池弹窗明确直流母线与净充电正负 | 通过 |
+| 发动机充电与采样燃油流量 | Rule Based制动工况t=20秒ModeCode=4显示“发电 / 发动机充电”；L/h精确核对保存JSON中相邻FuelUsed_L差分 | 通过 |
 
 测试曾发现并修复：隐藏标签导致播放速度没有可访问名称、LineSegments 的射线阈值使相邻部件被误点选、复位按钮在相同预设下未还原相机。终轮对这些行为重新进行了真实输入验证。
 
