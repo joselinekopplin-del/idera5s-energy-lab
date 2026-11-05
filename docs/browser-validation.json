@@ -275,5 +275,82 @@
     "Short functional checks include video instrumentation; use a separate sustained run for performance conclusions.",
     "Mobile tests emulate touch and viewport on the desktop GPU; no physical phone was measured.",
     "The 120-second sustained replay test is explicitly excluded, not counted as skipped."
-  ]
+  ],
+  "targetedRetests": [
+    {
+      "date": "2026-11-05T07:20:48.143Z",
+      "scope": "Final front-axle energy paths and LOD resource regression; existing tests extended, not new unique tests.",
+      "command": "pnpm test:browser --project desktop --grep 'saved braking playback|LOD switches stabilize'",
+      "stats": {
+        "startTime": "2026-11-05T07:20:48.143Z",
+        "duration": 8039.746,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "tests": [
+        {
+          "title": "saved braking playback, wheel motion, reversed recovery arrows and synchronized chart cursors",
+          "status": "passed",
+          "duration_ms": 3631
+        },
+        {
+          "title": "LOD switches stabilize GPU geometry and texture counts without growing each cycle",
+          "status": "passed",
+          "duration_ms": 3246
+        }
+      ],
+      "frontAxleChecks": [
+        "Two front-wheel paths each carry (Wheel_W + Friction_W)/2; their sum equals the saved mechanical axle power before friction brakes.",
+        "Accelerating samples show gearbox-to-wheel flow; regenerative braking samples show wheel-to-gear flow.",
+        "Arrow positions and quaternion-derived directions match the respective world-space endpoints."
+      ],
+      "lodResources": [
+        {
+          "quality": "high",
+          "triangles": 311182,
+          "geometries": 55,
+          "textures": 4,
+          "programs": 6
+        },
+        {
+          "quality": "low",
+          "triangles": 53601,
+          "geometries": 52,
+          "textures": 4,
+          "programs": 6
+        },
+        {
+          "quality": "standard",
+          "triangles": 143881,
+          "geometries": 55,
+          "textures": 4,
+          "programs": 6
+        },
+        {
+          "quality": "high",
+          "triangles": 311182,
+          "geometries": 55,
+          "textures": 4,
+          "programs": 6
+        },
+        {
+          "quality": "low",
+          "triangles": 53601,
+          "geometries": 52,
+          "textures": 4,
+          "programs": 6
+        },
+        {
+          "quality": "standard",
+          "triangles": 143881,
+          "geometries": 55,
+          "textures": 4,
+          "programs": 6
+        }
+      ]
+    }
+  ],
+  "uniqueFunctionalTestCount": 15
 }

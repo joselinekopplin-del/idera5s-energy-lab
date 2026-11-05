@@ -112,10 +112,35 @@ test('saved braking playback, wheel motion, reversed recovery arrows and synchro
   await expect(page.getByRole('button', { name: '播放回放', exact: true })).toBeEnabled();
   await page.getByRole('combobox', { name: '车身显示', exact: true }).selectOption('hidden');
   const slider = page.getByRole('slider', { name: '回放时间', exact: true });
+  const assertFrontAxle = (snapshot: any, sign: 1 | -1) => {
+    const frontFlows = snapshot.arrows.filter((flow: any) => flow.from === 'gear' && /^wheel_F[LR]$/.test(flow.to));
+    expect(frontFlows).toHaveLength(2);
+    const axlePower = snapshot.sample.Wheel_W + snapshot.sample.Friction_W;
+    expect(sign * axlePower).toBeGreaterThan(100);
+    // The two half-shafts carry mechanical axle power before friction braking;
+    // negative power travels from each front wheel back toward the gearbox.
+    expect(frontFlows.reduce((total: number, flow: any) => total + flow.power, 0)).toBeCloseTo(axlePower, 8);
+    for (const flow of frontFlows) {
+      expect(flow.visible).toBe(true);
+      expect(flow.power).toBeCloseTo(axlePower / 2, 8);
+      const start = snapshot.endpoints[sign > 0 ? 'gear' : flow.to];
+      const end = snapshot.endpoints[sign > 0 ? flow.to : 'gear'];
+      const expectedPosition = start.map((value: number, i: number) => value + (end[i] - value) * .68 + (i === 2 ? .2 : 0));
+      const length = distance(end, start);
+      const expectedDirection = end.map((value: number, i: number) => (value - start[i]) / length);
+      expect(distance(flow.position, expectedPosition)).toBeLessThan(.001);
+      expect(distance(flow.direction, expectedDirection)).toBeLessThan(.00001);
+    }
+  };
+  await moveSlider(slider, .12);
+  await expect.poll(async () => (await state(page)).sample.AxleHalf_W).toBeGreaterThan(100);
+  await expect.poll(async () => (await state(page)).arrows.filter((flow: any) => flow.from === 'gear' && flow.visible).length).toBe(2);
+  assertFrontAxle(await state(page), 1);
   await moveSlider(slider, .46);
   await expect.poll(async () => (await state(page)).sample.Motor_W).toBeLessThan(-100);
   await expect.poll(async () => (await state(page)).arrows.find((flow: any) => flow.from === 'battery' && flow.to === 'motor')?.visible).toBe(true);
   const recovering = await state(page);
+  assertFrontAxle(recovering, -1);
   const arrow = recovering.arrows.find((flow: any) => flow.from === 'battery' && flow.to === 'motor');
   const from = recovering.parts.motor, to = recovering.parts.battery;
   const expected = from.map((value: number, i: number) => value + (to[i] - value) * .68 + (i === 2 ? .2 : 0));

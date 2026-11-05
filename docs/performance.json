@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-05T07:04:44.793Z",
+  "date": "2026-11-05T07:24:28.383Z",
   "base": "http://127.0.0.1:4173/idera5s-energy-lab/",
   "browser": "156.0.4314.58",
   "os": "Windows_NT 10.0.26200",
@@ -16,7 +16,7 @@
       ],
       "ready": true,
       "quality": "standard",
-      "loadMs": 78.7999999821186,
+      "loadMs": 68.2000000178814,
       "frameMsMedian": 16.69999999999891,
       "fps": 59.880239520962,
       "frameCount": 360,
@@ -26,8 +26,8 @@
       "textures": 4,
       "programs": 6,
       "camera": [
-        10.624389317859206,
-        3.9525120648196594,
+        10.620244432187574,
+        3.9636357300557563,
         3.699999999999603
       ],
       "target": [
@@ -90,15 +90,27 @@
           "to": "aux",
           "power": 400,
           "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 0,
+          "visible": false
         }
       ],
-      "heap": 27236622,
-      "frameMsP95": 16.800000000000182,
+      "heap": 25892582,
+      "frameMsP95": 16.799999999999272,
       "sampleTime_s": 0,
-      "elapsedPageMs": 11793.59999999404,
-      "cpuOneCorePercent": 33.40340518387533,
-      "cpuMachinePercent": 1.043856411996104,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1781, 5, 3, 19.17"
+      "elapsedPageMs": 11688.899999976158,
+      "cpuOneCorePercent": 27.0877280452095,
+      "cpuMachinePercent": 0.8464915014127968,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2163, 10, 5, 14.34"
     },
     {
       "name": "desktop-high",
@@ -108,7 +120,7 @@
       ],
       "ready": true,
       "quality": "high",
-      "loadMs": 49.400000005960464,
+      "loadMs": 44,
       "frameMsMedian": 16.700000000000728,
       "fps": 59.88023952095548,
       "frameCount": 360,
@@ -182,15 +194,27 @@
           "to": "aux",
           "power": 400,
           "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 0,
+          "visible": false
         }
       ],
-      "heap": 19480322,
+      "heap": 19330641,
       "frameMsP95": 16.799999999999272,
       "sampleTime_s": 0,
-      "elapsedPageMs": 22424.59999999404,
-      "cpuOneCorePercent": 28.4592792525642,
-      "cpuMachinePercent": 0.8893524766426313,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1780, 14, 4, 20.06"
+      "elapsedPageMs": 22322,
+      "cpuOneCorePercent": 26.797264566236105,
+      "cpuMachinePercent": 0.8374145176948783,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2173, 2, 4, 12.45"
     },
     {
       "name": "desktop-low",
@@ -200,9 +224,9 @@
       ],
       "ready": true,
       "quality": "low",
-      "loadMs": 22.19999998807907,
-      "frameMsMedian": 16.69999999999709,
-      "fps": 59.880239520968516,
+      "loadMs": 19.799999982118607,
+      "frameMsMedian": 16.700000000000728,
+      "fps": 59.88023952095548,
       "frameCount": 360,
       "drawCalls": 35,
       "triangles": 53601,
@@ -274,15 +298,27 @@
           "to": "aux",
           "power": 400,
           "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 0,
+          "visible": false
         }
       ],
-      "heap": 11265190,
+      "heap": 11320985,
       "frameMsP95": 16.799999999999272,
       "sampleTime_s": 0,
-      "elapsedPageMs": 33052.80000001192,
-      "cpuOneCorePercent": 29.567470970406283,
-      "cpuMachinePercent": 0.9239834678251964,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1776, 6, 3, 21.93"
+      "elapsedPageMs": 32946.69999998808,
+      "cpuOneCorePercent": 27.22565507123049,
+      "cpuMachinePercent": 0.8508017209759529,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2168, 12, 5, 15.37"
     },
     {
       "name": "mobile-emulated-auto",
@@ -292,7 +328,7 @@
       ],
       "ready": true,
       "quality": "low",
-      "loadMs": 33.400000005960464,
+      "loadMs": 27.399999976158142,
       "frameMsMedian": 16.699999999999818,
       "fps": 59.88023952095874,
       "frameCount": 360,
@@ -366,14 +402,26 @@
           "to": "aux",
           "power": 400,
           "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 0,
+          "visible": false
         }
       ],
-      "heap": 18415000,
+      "heap": 18707305,
       "frameMsP95": 16.800000000000182,
       "sampleTime_s": 0,
-      "elapsedPageMs": 10511.09999999404,
-      "cpuOneCorePercent": 29.800750062833107,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1778, 13, 7, 25.49"
+      "elapsedPageMs": 10461,
+      "cpuOneCorePercent": 28.423048947245228,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2159, 8, 3, 19.49"
     }
   ],
   "longReplay": [
@@ -381,19 +429,19 @@
       "elapsed_s": 0,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
-        7.593712233797589,
-        8.416384883681339,
-        3.6999999999997932
+        7.593712233785377,
+        8.416384883692377,
+        3.6999999999997994
       ],
       "target": [
         0,
@@ -455,25 +503,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 7153.87335146245,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 7153.87335146245,
+          "visible": true
         }
       ],
-      "heap": 22997808,
+      "heap": 22762105,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 80,
-      "elapsedPageMs": 37874.30000001192,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1867, 18, 9, 25.51"
+      "elapsedPageMs": 37642.29999998212,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2222, 15, 5, 17.99"
     },
     {
-      "elapsed_s": 10.0786993,
+      "elapsed_s": 10.0667494,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -541,25 +601,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 7087.51087237035,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 7087.51087237035,
+          "visible": true
         }
       ],
-      "heap": 23593998,
+      "heap": 23154136,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 280,
-      "elapsedPageMs": 47953.19999998808,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 7, 3, 20.57"
+      "elapsedPageMs": 47708.69999998808,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2268, 16, 5, 16.77"
     },
     {
-      "elapsed_s": 20.150781900000002,
+      "elapsed_s": 20.139174199999992,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -627,25 +699,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 4408.40259546382,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 4408.40259546382,
+          "visible": true
         }
       ],
-      "heap": 22713136,
+      "heap": 24064133,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 482,
-      "elapsedPageMs": 58025.30000001192,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 7, 3, 20.57"
+      "elapsedPageMs": 57781,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2230, 3, 4, 14.41"
     },
     {
-      "elapsed_s": 30.2172944,
+      "elapsed_s": 30.210165799999995,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -713,25 +797,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 3877.00692354777,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 3877.00692354777,
+          "visible": true
         }
       ],
-      "heap": 22503296,
+      "heap": 24404965,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 684,
-      "elapsedPageMs": 68091.5,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 6, 3, 20.41"
+      "elapsedPageMs": 67852.29999998212,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2261, 3, 4, 14.49"
     },
     {
-      "elapsed_s": 40.2933285,
+      "elapsed_s": 40.2771511,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -764,10 +860,10 @@
         "flow": true
       },
       "wheels": [
-        -66133.72761868217,
-        -66133.72761868217,
-        -66133.72761868217,
-        -66133.72761868217
+        -65980.73307472545,
+        -65980.73307472545,
+        -65980.73307472545,
+        -65980.73307472545
       ],
       "flows": [
         {
@@ -785,13 +881,13 @@
         {
           "from": "battery",
           "to": "motor",
-          "power": 13328.86128054211,
+          "power": 13267.72192890634,
           "visible": true
         },
         {
           "from": "motor",
           "to": "gear",
-          "power": 12312.1219960881,
+          "power": 12255.3670213509,
           "visible": true
         },
         {
@@ -799,25 +895,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 5943.85300535515,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 5943.85300535515,
+          "visible": true
         }
       ],
-      "heap": 24504631,
+      "heap": 25128804,
       "frameMsP95": 16.80000000000291,
-      "sampleTime_s": 886,
-      "elapsedPageMs": 78167.69999998808,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1825, 7, 3, 20.28"
+      "sampleTime_s": 884,
+      "elapsedPageMs": 77919.09999999404,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2211, 2, 4, 15.45"
     },
     {
-      "elapsed_s": 50.3640799,
+      "elapsed_s": 50.33920399999999,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -885,25 +993,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 7688.40461324165,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 7688.40461324165,
+          "visible": true
         }
       ],
-      "heap": 24675268,
+      "heap": 23482537,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 1086,
-      "elapsedPageMs": 88238.69999998808,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1825, 7, 3, 21.11"
+      "elapsedPageMs": 87981.59999999404,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2211, 3, 4, 15.36"
     },
     {
-      "elapsed_s": 60.43213310000001,
+      "elapsed_s": 60.410341800000005,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -971,25 +1091,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 5604.41515345745,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 5604.41515345745,
+          "visible": true
         }
       ],
-      "heap": 25645146,
+      "heap": 22748309,
       "frameMsP95": 16.80000000000291,
       "sampleTime_s": 1288,
-      "elapsedPageMs": 98306.5,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 6, 3, 20.55"
+      "elapsedPageMs": 98052.59999999404,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2211, 3, 4, 15.62"
     },
     {
-      "elapsed_s": 70.51715850000001,
+      "elapsed_s": 70.4767377,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -1022,10 +1154,10 @@
         "flow": true
       },
       "wheels": [
-        -115783.48796982893,
-        -115783.48796982893,
-        -115783.48796982893,
-        -115783.48796982893
+        -115648.43949192727,
+        -115648.43949192727,
+        -115648.43949192727,
+        -115648.43949192727
       ],
       "flows": [
         {
@@ -1043,13 +1175,13 @@
         {
           "from": "battery",
           "to": "motor",
-          "power": 8388.241922122272,
+          "power": 8397.745498821476,
           "visible": true
         },
         {
           "from": "motor",
           "to": "gear",
-          "power": 7723.68323280279,
+          "power": 7732.43724501878,
           "visible": true
         },
         {
@@ -1057,25 +1189,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 3750.23206383411,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 3750.23206383411,
+          "visible": true
         }
       ],
-      "heap": 24040833,
+      "heap": 25784554,
       "frameMsP95": 16.80000000000291,
-      "sampleTime_s": 1490,
-      "elapsedPageMs": 108391.80000001192,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 6, 3, 20.13"
+      "sampleTime_s": 1488,
+      "elapsedPageMs": 108118.79999998212,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2211, 2, 4, 16.58"
     },
     {
-      "elapsed_s": 80.5977908,
+      "elapsed_s": 80.5401827,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -1108,10 +1252,10 @@
         "flow": true
       },
       "wheels": [
-        -129216.03520386163,
-        -129216.03520386163,
-        -129216.03520386163,
-        -129216.03520386163
+        -129077.44168680052,
+        -129077.44168680052,
+        -129077.44168680052,
+        -129077.44168680052
       ],
       "flows": [
         {
@@ -1129,13 +1273,13 @@
         {
           "from": "battery",
           "to": "motor",
-          "power": 10637.027153170939,
+          "power": 10587.24879783439,
           "visible": true
         },
         {
           "from": "motor",
           "to": "gear",
-          "power": 9812.43361774411,
+          "power": 9766.20816306986,
           "visible": true
         },
         {
@@ -1143,25 +1287,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 4736.610959088885,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 4736.610959088885,
+          "visible": true
         }
       ],
-      "heap": 23358172,
+      "heap": 24675351,
       "frameMsP95": 16.80000000000291,
-      "sampleTime_s": 1692,
-      "elapsedPageMs": 118472.40000000596,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1830, 7, 3, 20.59"
+      "sampleTime_s": 1690,
+      "elapsedPageMs": 118182.59999999404,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2211, 0, 0, 15.41"
     },
     {
-      "elapsed_s": 90.68534419999999,
+      "elapsed_s": 90.61278349999999,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.69999999999709,
       "fps": 59.880239520968516,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -1229,25 +1385,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 7270.8604532152,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 7270.8604532152,
+          "visible": true
         }
       ],
-      "heap": 23462550,
-      "frameMsP95": 16.80000000000291,
+      "heap": 22543621,
+      "frameMsP95": 17.80000000000291,
       "sampleTime_s": 1892,
-      "elapsedPageMs": 128559.90000000596,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1824, 6, 3, 20.81"
+      "elapsedPageMs": 128254.89999997616,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2225, 2, 3, 19.35"
     },
     {
-      "elapsed_s": 100.7630806,
+      "elapsed_s": 100.67996179999999,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.699999999982538,
       "fps": 59.8802395210207,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -1280,10 +1448,10 @@
         "flow": true
       },
       "wheels": [
-        -162563.4174260586,
-        -162563.4174260586,
-        -162563.4174260586,
-        -162563.4174260586
+        -162386.2859153249,
+        -162386.2859153249,
+        -162386.2859153249,
+        -162386.2859153249
       ],
       "flows": [
         {
@@ -1301,13 +1469,13 @@
         {
           "from": "battery",
           "to": "motor",
-          "power": 15470.642309247669,
+          "power": 15524.41006182749,
           "visible": true
         },
         {
           "from": "motor",
           "to": "gear",
-          "power": 14276.6358833489,
+          "power": 14326.561441661,
           "visible": true
         },
         {
@@ -1315,25 +1483,37 @@
           "to": "aux",
           "power": 400,
           "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 6948.3822992056,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 6948.3822992056,
+          "visible": true
         }
       ],
-      "heap": 26811710,
+      "heap": 24702675,
       "frameMsP95": 16.79999999998836,
-      "sampleTime_s": 2094,
-      "elapsedPageMs": 138637.5,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1931, 5, 4, 20.70"
+      "sampleTime_s": 2092,
+      "elapsedPageMs": 138322.5,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2225, 3, 4, 14.12"
     },
     {
-      "elapsed_s": 110.8401127,
+      "elapsed_s": 110.7437005,
       "ready": true,
       "quality": "standard",
-      "loadMs": 18.900000005960464,
+      "loadMs": 18.400000005960464,
       "frameMsMedian": 16.699999999982538,
       "fps": 59.8802395210207,
       "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
       "textures": 4,
       "programs": 8,
       "camera": [
@@ -1366,10 +1546,10 @@
         "flow": true
       },
       "wheels": [
-        -179096.16837138584,
-        -179096.16837138584,
-        -179096.16837138584,
-        -179096.16837138584
+        -178948.52402812926,
+        -178948.52402812926,
+        -178948.52402812926,
+        -178948.52402812926
       ],
       "flows": [
         {
@@ -1387,13 +1567,13 @@
         {
           "from": "battery",
           "to": "motor",
-          "power": 9566.59252726952,
+          "power": 9607.662237640026,
           "visible": true
         },
         {
           "from": "motor",
           "to": "gear",
-          "power": 8811.69298253599,
+          "power": 8849.63729263758,
           "visible": true
         },
         {
@@ -1401,127 +1581,151 @@
           "to": "aux",
           "power": 400,
           "visible": true
-        }
-      ],
-      "heap": 23428483,
-      "frameMsP95": 16.800000000017462,
-      "sampleTime_s": 2296,
-      "elapsedPageMs": 148714.19999998808,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2028, 6, 5, 19.34"
-    },
-    {
-      "elapsed_s": 120.9019025,
-      "ready": true,
-      "quality": "standard",
-      "loadMs": 18.900000005960464,
-      "frameMsMedian": 16.699999999982538,
-      "fps": 59.8802395210207,
-      "frameCount": 360,
-      "drawCalls": 76,
-      "triangles": 144733,
-      "geometries": 64,
-      "textures": 4,
-      "programs": 8,
-      "camera": [
-        7.593712233821186,
-        8.416384883659758,
-        3.699999999999707
-      ],
-      "target": [
-        0,
-        0,
-        0.7199999999999995
-      ],
-      "auto": false,
-      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
-      "canvas": [
-        767,
-        745
-      ],
-      "dpr": 1,
-      "settings": {
-        "color": "gold",
-        "lights": "drl",
-        "shell": "transparent",
-        "explode": 0,
-        "auto": false,
-        "studio": "light",
-        "quality": "standard",
-        "view": "front45",
-        "reset": 0,
-        "flow": true
-      },
-      "wheels": [
-        -192833.94499843928,
-        -192833.94499843928,
-        -192833.94499843928,
-        -192833.94499843928
-      ],
-      "flows": [
-        {
-          "from": "fuel",
-          "to": "engine",
-          "power": 0,
-          "visible": false
         },
         {
-          "from": "engine",
-          "to": "gear",
-          "power": 0,
-          "visible": false
-        },
-        {
-          "from": "battery",
-          "to": "motor",
-          "power": 8839.775849804373,
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 4292.074086929225,
           "visible": true
         },
         {
-          "from": "motor",
-          "to": "gear",
-          "power": 8143.96875850278,
-          "visible": true
-        },
-        {
-          "from": "battery",
-          "to": "aux",
-          "power": 400,
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 4292.074086929225,
           "visible": true
         }
       ],
-      "heap": 23353918,
+      "heap": 22858264,
       "frameMsP95": 16.79999999998836,
-      "sampleTime_s": 2498,
-      "elapsedPageMs": 158776,
-      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 1927, 8, 5, 20.78"
+      "sampleTime_s": 2294,
+      "elapsedPageMs": 148385.89999997616,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2225, 4, 4, 13.98"
+    },
+    {
+      "elapsed_s": 120.8138054,
+      "ready": true,
+      "quality": "standard",
+      "loadMs": 18.400000005960464,
+      "frameMsMedian": 16.699999999982538,
+      "fps": 59.8802395210207,
+      "frameCount": 360,
+      "drawCalls": 82,
+      "triangles": 144981,
+      "geometries": 70,
+      "textures": 4,
+      "programs": 8,
+      "camera": [
+        7.593712233821186,
+        8.416384883659758,
+        3.699999999999707
+      ],
+      "target": [
+        0,
+        0,
+        0.7199999999999995
+      ],
+      "auto": false,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "canvas": [
+        767,
+        745
+      ],
+      "dpr": 1,
+      "settings": {
+        "color": "gold",
+        "lights": "drl",
+        "shell": "transparent",
+        "explode": 0,
+        "auto": false,
+        "studio": "light",
+        "quality": "standard",
+        "view": "front45",
+        "reset": 0,
+        "flow": true
+      },
+      "wheels": [
+        -192702.77543427589,
+        -192702.77543427589,
+        -192702.77543427589,
+        -192702.77543427589
+      ],
+      "flows": [
+        {
+          "from": "fuel",
+          "to": "engine",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "engine",
+          "to": "gear",
+          "power": 0,
+          "visible": false
+        },
+        {
+          "from": "battery",
+          "to": "motor",
+          "power": 8814.865660232907,
+          "visible": true
+        },
+        {
+          "from": "motor",
+          "to": "gear",
+          "power": 8120.85032126332,
+          "visible": true
+        },
+        {
+          "from": "battery",
+          "to": "aux",
+          "power": 400,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FL",
+          "power": 3938.61240581271,
+          "visible": true
+        },
+        {
+          "from": "gear",
+          "to": "wheel_FR",
+          "power": 3938.61240581271,
+          "visible": true
+        }
+      ],
+      "heap": 22999312,
+      "frameMsP95": 16.79999999998836,
+      "sampleTime_s": 2496,
+      "elapsedPageMs": 158456.09999999404,
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 582.05, 8151, 2225, 3, 4, 13.65"
     }
   ],
-  "navigationReadyMs": 1208.4000000059605,
+  "navigationReadyMs": 1125.199999988079,
   "initialResources": [
     {
       "name": "vehicle-standard.glb",
-      "durationMs": 66.09999999403954,
+      "durationMs": 17.69999998807907,
       "transferBytes": 3037756,
       "decodedBytes": 3037456
     },
     {
       "name": "catalog.json",
-      "durationMs": 11.900000005960464,
+      "durationMs": 10.599999994039536,
       "transferBytes": 16753,
       "decodedBytes": 107724
     }
   ],
-  "longReplayCpuOneCorePercent": 59.30213282810907,
+  "longReplayCpuOneCorePercent": 55.65062774133521,
   "longReplayAfterGC": {
     "ready": true,
     "quality": "standard",
-    "loadMs": 18.900000005960464,
+    "loadMs": 18.400000005960464,
     "frameMsMedian": 16.699999999982538,
     "fps": 59.8802395210207,
     "frameCount": 360,
-    "drawCalls": 76,
-    "triangles": 144733,
-    "geometries": 64,
+    "drawCalls": 82,
+    "triangles": 144981,
+    "geometries": 70,
     "textures": 4,
     "programs": 8,
     "camera": [
@@ -1554,10 +1758,10 @@
       "flow": true
     },
     "wheels": [
-      -192833.94499843928,
-      -192833.94499843928,
-      -192833.94499843928,
-      -192833.94499843928
+      -192702.77543427589,
+      -192702.77543427589,
+      -192702.77543427589,
+      -192702.77543427589
     ],
     "flows": [
       {
@@ -1575,13 +1779,13 @@
       {
         "from": "battery",
         "to": "motor",
-        "power": 8839.775849804373,
+        "power": 8814.865660232907,
         "visible": true
       },
       {
         "from": "motor",
         "to": "gear",
-        "power": 8143.96875850278,
+        "power": 8120.85032126332,
         "visible": true
       },
       {
@@ -1589,11 +1793,23 @@
         "to": "aux",
         "power": 400,
         "visible": true
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FL",
+        "power": 3938.61240581271,
+        "visible": true
+      },
+      {
+        "from": "gear",
+        "to": "wheel_FR",
+        "power": 3938.61240581271,
+        "visible": true
       }
     ],
-    "heap": 22225459,
+    "heap": 22248330,
     "frameMsP95": 16.79999999998836,
-    "sampleTime_s": 2498,
-    "elapsedPageMs": 158891
+    "sampleTime_s": 2496,
+    "elapsedPageMs": 158561.39999997616
   }
 }

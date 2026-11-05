@@ -16,7 +16,8 @@ export async function state(page: Page) {
       bodyZ: engine.body?.position.z,
       partsVisible: engine.parts.all.visible,
       parts: Object.fromEntries(Object.entries(engine.parts.groups).map(([key, group]: [string, any]) => [key, group.position.toArray()])),
-      arrows: engine.flowGroups.map((flow: any) => ({ from: flow.from, to: flow.to, power: engine.sample[flow.power], visible: flow.group.visible, position: flow.arrow.position.toArray() })),
+      endpoints: Object.fromEntries([...Object.entries(engine.parts.groups), ...engine.wheels.map((wheel: any) => [wheel.name, wheel])].map(([key, group]: [string, any]) => [key, group.getWorldPosition(group.position.clone()).toArray()])),
+      arrows: engine.flowGroups.map((flow: any) => ({ from: flow.from, to: flow.to, power: engine.sample[flow.power], visible: flow.group.visible, position: flow.arrow.position.toArray(), direction: flow.arrow.position.clone().set(0, 1, 0).applyQuaternion(flow.arrow.quaternion).toArray() })),
     };
   });
 }

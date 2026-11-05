@@ -313,6 +313,8 @@ class SceneEngine {
       ["battery", "motor", "MotorElectrical_W"],
       ["motor", "gear", "Motor_W"],
       ["battery", "aux", "Aux_W"],
+      ["gear", "wheel_FL", "AxleHalf_W"],
+      ["gear", "wheel_FR", "AxleHalf_W"],
     ]) {
       const group = new T.Group();
       const mat = new T.MeshBasicMaterial({
@@ -554,6 +556,8 @@ class SceneEngine {
     this.sample = {
       ...sample,
       MotorElectrical_W: (sample.Motor_W ?? 0) + (sample.MotorLoss_W ?? 0),
+      // Remove friction braking before visualizing the mechanical path to the motor.
+      AxleHalf_W: ((sample.Wheel_W ?? 0) + (sample.Friction_W ?? 0)) / 2,
     };
     this.updateLights();
     const angle = (-(sample.Distance_km ?? 0) * 1000) / 0.33965;
@@ -635,8 +639,11 @@ class SceneEngine {
       f.group.visible =
         this.parts.all.visible && this.settings.flow && Math.abs(p) > 20;
       if (!f.group.visible) continue;
-      let a = this.parts.groups[f.from].position.clone(),
-        b = this.parts.groups[f.to].position.clone();
+      const fromObject = this.parts.groups[f.from] || this.model?.getObjectByName(f.from);
+      const toObject = this.parts.groups[f.to] || this.model?.getObjectByName(f.to);
+      if (!fromObject || !toObject) { f.group.visible = false; continue; }
+      let a = fromObject.getWorldPosition(new T.Vector3()),
+        b = toObject.getWorldPosition(new T.Vector3());
       a.z += 0.2;
       b.z += 0.2;
       if (p < 0) [a, b] = [b, a];
