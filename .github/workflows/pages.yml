@@ -1,0 +1,76 @@
+name: Validate and deploy Energy Lab
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      run_browser:
+        description: Also run Chromium interaction checks (software-rendered CI, not hardware FPS)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: pnpm/action-setup@v6.1.1
+        with:
+          version: '11.25.0'
+          cache: true
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check TypeScript
+        run: pnpm typecheck
+      - name: Validate published data and assets
+        run: pnpm test
+      - name: Build the static website
+        run: pnpm build
+      - name: Install Chromium for optional browser checks
+        if: github.event_name == 'workflow_dispatch' && inputs.run_browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Exercise browser interactions
+        if: github.event_name == 'workflow_dispatch' && inputs.run_browser
+        run: pnpm test:browser
+        env:
+          CI: 'true'
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6.0.0
+      - name: Upload only the Vite build output
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish the verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

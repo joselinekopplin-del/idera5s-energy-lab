@@ -1,0 +1,11 @@
+{
+  "name": "idera5s-energy-lab", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1", "build": "tsc -b && vite build", "typecheck": "tsc -b",
+    "preview": "vite preview --host 127.0.0.1", "test": "node --test tests/*.test.mjs",
+    "export:data": "node scripts/export-data.mjs", "export:models": "node scripts/generate-models.mjs",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {"react": "^19.2.0", "react-dom": "^19.2.0", "three": "^0.183.0", "lucide-react": "^0.577.0"},
+  "devDependencies": {"@types/react": "^19.2.0", "@types/react-dom": "^19.2.0", "@types/three": "^0.183.0", "typescript": "^5.9.3", "vite": "^7.3.1", "@vitejs/plugin-react": "^5.1.1", "@playwright/test": "^1.58.2", "@gltf-transform/core": "^4.3.0", "@gltf-transform/extensions": "^4.3.0"}
+}

@@ -1,0 +1,3210 @@
+{
+  "schemaVersion": 1,
+  "version": "matlab-csv-98d5b83d4fe79b96",
+  "datasetHash": "98d5b83d4fe79b966b05735d44b05518d8f129c0860b0cfdf3198fd77a1181a9",
+  "sourceFormat": "MATLAB saved CSV, with companion MAT digests",
+  "playbackOnly": true,
+  "scientificSolverInBrowser": false,
+  "speedSemantics": "prescribed_reference_not_measured",
+  "provenance": {
+    "summary": {
+      "file": "results/scenario_summary.csv",
+      "sha256": "e0cc4f6da2b93c513d1627e4934f5856758e3f16831e9b443db2896b17d7c172"
+    },
+    "scientificSources": [
+      {
+        "file": "+ems/simulate.m",
+        "sha256": "ec004ae0d88ec730cc6b6c7d3fcec2ece011ae1f1f898e1bc689075c45d4c513"
+      },
+      {
+        "file": "+ems/summarize.m",
+        "sha256": "f5d3b3ee0e8ca7397d1459fe1cf299fd6130dcd3cfdd56fc4cfa70a1c843e789"
+      },
+      {
+        "file": "+ems/actuate.m",
+        "sha256": "f7d7d8f20bbb1d004fcf249fda2d5be241d3e100c9ac0d9bce6cb92c3abf374d"
+      },
+      {
+        "file": "+ems/step.m",
+        "sha256": "e6596abf1ef80ee2dc65373fa6a59caa70beeddffef79466cb83ddcbebd0a7f2"
+      },
+      {
+        "file": "+ems/demand.m",
+        "sha256": "5d7aedb468a9ce70023b56f8c76aa8812dd258cb823d8a79403bfebcfddd9e8a"
+      },
+      {
+        "file": "+ems/engine.m",
+        "sha256": "91d452461c037b9320f92e762bf4c1d20d7a498f7862eeed3195b4050f164252"
+      },
+      {
+        "file": "+ems/motor.m",
+        "sha256": "338790bd9942816dd294db3ce5eb8619942f90b5526d6fbadde27b8165ea296e"
+      },
+      {
+        "file": "+ems/limits.m",
+        "sha256": "189e32bc1924f95c7c8db68b104b89ccddf442f6e28412e35931cce40f40c5e3"
+      },
+      {
+        "file": "+ems/auxiliary.m",
+        "sha256": "52654acee8cafabf24d57f34ee60b078e4f872ce2647e63a4aeed69db76b650f"
+      },
+      {
+        "file": "+ems/initial.m",
+        "sha256": "d4bf3dfed493fd256092508fb810860973c04b761549e9cf1808218151b2d1a8"
+      },
+      {
+        "file": "parameters/vehicle_parameters.m",
+        "sha256": "77eab3b9e263931b0a5dae8f605947733c53873c3b8660f1a779e6b8c1841011"
+      },
+      {
+        "file": "controllers/select_engine_power.m",
+        "sha256": "726e4e07f271d729b05a0e0bf9110e9a63d58c283b8cf74cc557901d65ecd845"
+      },
+      {
+        "file": "scenarios/make_scenario.m",
+        "sha256": "70cb26f0896ca10fe31c1ef207da133915c0946ac96583e76b10345862a571c1"
+      },
+      {
+        "file": "scenarios/scenario_catalog.m",
+        "sha256": "64a8f8191f12556e6df1776ad66ef778fc35d92e40a6387f4a4f28c73c27b8e5"
+      }
+    ],
+    "method": "Prescribed-speed backward quasi-static engineering model; custom synthetic cycles; not certified CLTC/WLTC.",
+    "precision": "Every numeric CSV cell is parsed as an IEEE-754 double without rounding or resampling; MATLAB CSV serialization precision is retained. NaN/Inf become JSON null, never zero.",
+    "matUsage": "Companion MAT files are hashed for provenance only. Numeric JSON values come from the saved CSV exports; no MATLAB simulation is rerun.",
+    "caution": "Reference speed and reference distance are not achieved vehicle motion. Feasible is copied from the official summary. Internal parts and efficiencies are educational approximations.",
+    "feasibilityRule": "Saved MATLAB summary: Unmet_kWh < 1e-4 and AuxUnmet_kWh < 1e-4. No web-side reclassification."
+  },
+  "counts": {
+    "runs": 64,
+    "scenarios": 16,
+    "strategies": 4,
+    "infeasible": 3
+  },
+  "scenarios": [
+    {
+      "id": "urban",
+      "label": "城市通勤"
+    },
+    {
+      "id": "express",
+      "label": "城市快速路"
+    },
+    {
+      "id": "highway80",
+      "label": "高速 80 km/h"
+    },
+    {
+      "id": "highway100",
+      "label": "高速 100 km/h"
+    },
+    {
+      "id": "highway110",
+      "label": "高速 110 km/h"
+    },
+    {
+      "id": "highway120",
+      "label": "高速 120 km/h"
+    },
+    {
+      "id": "acceleration",
+      "label": "急加速"
+    },
+    {
+      "id": "braking",
+      "label": "减速制动"
+    },
+    {
+      "id": "mountain",
+      "label": "山区道路"
+    },
+    {
+      "id": "winterMinus10",
+      "label": "冬季 −10°C"
+    },
+    {
+      "id": "winter0",
+      "label": "冬季 0°C"
+    },
+    {
+      "id": "summer30",
+      "label": "夏季 30°C"
+    },
+    {
+      "id": "summer35",
+      "label": "夏季 35°C"
+    },
+    {
+      "id": "fullLoad",
+      "label": "满载行驶"
+    },
+    {
+      "id": "longTrip",
+      "label": "长途混动"
+    },
+    {
+      "id": "socHold",
+      "label": "电量保持"
+    }
+  ],
+  "strategies": [
+    {
+      "id": "EVPriority",
+      "label": "纯电优先",
+      "sourceName": "EV Priority"
+    },
+    {
+      "id": "Rule_Based",
+      "label": "规则控制",
+      "sourceName": "Rule-Based"
+    },
+    {
+      "id": "SOCHold",
+      "label": "电量保持",
+      "sourceName": "SOC Hold"
+    },
+    {
+      "id": "ECMS",
+      "label": "等效燃油最小化",
+      "sourceName": "ECMS"
+    }
+  ],
+  "fields": [
+    {
+      "name": "Time_s",
+      "label": "时间",
+      "unit": "s"
+    },
+    {
+      "name": "Speed_mps",
+      "label": "参考速度",
+      "unit": "m/s",
+      "semantics": "prescribed_reference_not_measured"
+    },
+    {
+      "name": "SOC",
+      "label": "电池 SOC",
+      "unit": "fraction"
+    },
+    {
+      "name": "Engine_W",
+      "label": "发动机机械功率",
+      "unit": "W"
+    },
+    {
+      "name": "Motor_W",
+      "label": "电机机械功率",
+      "unit": "W",
+      "semantics": "positive_drive_negative_generation"
+    },
+    {
+      "name": "Battery_W",
+      "label": "电池端功率",
+      "unit": "W",
+      "semantics": "positive_discharge_negative_charge"
+    },
+    {
+      "name": "Fuel_W",
+      "label": "燃油化学功率",
+      "unit": "W"
+    },
+    {
+      "name": "Chemical_W",
+      "label": "电池化学功率",
+      "unit": "W"
+    },
+    {
+      "name": "Regen_W",
+      "label": "制动回收直流功率",
+      "unit": "W",
+      "semantics": "positive_generated_DC_before_auxiliaries"
+    },
+    {
+      "name": "Friction_W",
+      "label": "摩擦制动功率",
+      "unit": "W"
+    },
+    {
+      "name": "Aux_W",
+      "label": "已满足辅助负载",
+      "unit": "W"
+    },
+    {
+      "name": "Loss_W",
+      "label": "总损耗",
+      "unit": "W"
+    },
+    {
+      "name": "Unmet_W",
+      "label": "未满足驱动功率",
+      "unit": "W"
+    },
+    {
+      "name": "Balance_W",
+      "label": "能量守恒残差",
+      "unit": "W"
+    },
+    {
+      "name": "Battery_C",
+      "label": "电池温度（模型计算）",
+      "unit": "°C"
+    },
+    {
+      "name": "Motor_C",
+      "label": "电机温度（模型计算）",
+      "unit": "°C"
+    },
+    {
+      "name": "FuelRemaining_L",
+      "label": "剩余燃油",
+      "unit": "L"
+    },
+    {
+      "name": "EngineStarts",
+      "label": "该采样步发动机启动事件",
+      "unit": "0_or_1"
+    },
+    {
+      "name": "ModeCode",
+      "label": "运行模式编码",
+      "unit": "code"
+    },
+    {
+      "name": "Demand_W",
+      "label": "参考轮端需求功率",
+      "unit": "W"
+    },
+    {
+      "name": "Wheel_W",
+      "label": "模型轮端供给功率",
+      "unit": "W"
+    },
+    {
+      "name": "Current_A",
+      "label": "电池电流",
+      "unit": "A"
+    },
+    {
+      "name": "Voltage_V",
+      "label": "电池端电压",
+      "unit": "V"
+    },
+    {
+      "name": "EngineRPM",
+      "label": "发动机转速",
+      "unit": "rpm"
+    },
+    {
+      "name": "EngineEta",
+      "label": "发动机效率（通用近似模型）",
+      "unit": "fraction"
+    },
+    {
+      "name": "MotorEta",
+      "label": "电机效率（通用近似模型）",
+      "unit": "fraction"
+    },
+    {
+      "name": "BatteryLoss_W",
+      "label": "电池损耗",
+      "unit": "W"
+    },
+    {
+      "name": "MotorLoss_W",
+      "label": "电机损耗",
+      "unit": "W"
+    },
+    {
+      "name": "EngineLoss_W",
+      "label": "发动机损耗",
+      "unit": "W"
+    },
+    {
+      "name": "GearLoss_W",
+      "label": "传动损耗",
+      "unit": "W"
+    },
+    {
+      "name": "AuxUnmet_W",
+      "label": "未满足辅助负载",
+      "unit": "W"
+    },
+    {
+      "name": "Kinetic_W",
+      "label": "惯性需求",
+      "unit": "W"
+    },
+    {
+      "name": "Rolling_W",
+      "label": "滚阻需求",
+      "unit": "W"
+    },
+    {
+      "name": "Aero_W",
+      "label": "空气阻力需求",
+      "unit": "W"
+    },
+    {
+      "name": "Grade_W",
+      "label": "坡度需求",
+      "unit": "W"
+    },
+    {
+      "name": "Distance_km",
+      "label": "参考累计里程",
+      "unit": "km",
+      "semantics": "prescribed_reference_not_measured"
+    },
+    {
+      "name": "FuelUsed_L",
+      "label": "累计燃油消耗",
+      "unit": "L"
+    },
+    {
+      "name": "BatteryNet_kWh",
+      "label": "电池累计净耗电（化学能）",
+      "unit": "kWh"
+    },
+    {
+      "name": "Regen_kWh",
+      "label": "累计回收直流电量",
+      "unit": "kWh"
+    },
+    {
+      "name": "AvailableBattery_kWh",
+      "label": "SOC 窗口内剩余电量估算",
+      "unit": "kWh"
+    },
+    {
+      "name": "EstimatedEVRange_km",
+      "label": "当前纯电工况续航外推（非认证）",
+      "unit": "km",
+      "semantics": "null_when_estimation_conditions_not_met"
+    }
+  ],
+  "modes": [
+    "停车 / 辅助负载",
+    "纯电驱动",
+    "混合驱动 / 发动机运行",
+    "制动回收",
+    "发动机驱动并充电"
+  ],
+  "runs": [
+    {
+      "id": "urban_EVPriority",
+      "scenario": "urban",
+      "scenarioLabel": "城市通勤",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.940520275250165,
+        "RechargeFromGrid_kWh": 1.02230464701105,
+        "SOC_end": 0.800758100772244,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8026073756884,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.3006242425235,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.310861556835868
+      },
+      "source": {
+        "csv": "results/urban_EVPriority.csv",
+        "sha256": "deabc99551a7806ad5c7daf800d9cddc25e92a752ebb8b1bbf0818e1a342c7ab",
+        "mat": "results/urban_EVPriority.mat",
+        "matSha256": "a1706764aa4e3be1076097b43ee82d37c26d62e8315b6ec16026d51e59ff4a3d"
+      },
+      "file": "data/urban_EVPriority.json",
+      "bytes": 508421,
+      "sha256": "bb077a1e441d27821a1c4992a170e0ad65ba8bb0d17beef06c2b8ce088f41143",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "urban_Rule_Based",
+      "scenario": "urban",
+      "scenarioLabel": "城市通勤",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.940520275250165,
+        "RechargeFromGrid_kWh": 1.02230464701105,
+        "SOC_end": 0.800758100772244,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8026073756884,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.3006242425235,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.310861556835868
+      },
+      "source": {
+        "csv": "results/urban_Rule_Based.csv",
+        "sha256": "deabc99551a7806ad5c7daf800d9cddc25e92a752ebb8b1bbf0818e1a342c7ab",
+        "mat": "results/urban_Rule_Based.mat",
+        "matSha256": "500c56c0d03126c801513df473e3e1d22673afc289f2012b89d7a0692f8754a4"
+      },
+      "file": "data/urban_Rule_Based.json",
+      "bytes": 508421,
+      "sha256": "f513829c323aaf68141ffdc1f4d58641db12ab121be9815be6d43ea93d1b5aad",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "urban_SOCHold",
+      "scenario": "urban",
+      "scenarioLabel": "城市通勤",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.940520275250165,
+        "RechargeFromGrid_kWh": 1.02230464701105,
+        "SOC_end": 0.800758100772244,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8026073756884,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.3006242425235,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.310861556835868
+      },
+      "source": {
+        "csv": "results/urban_SOCHold.csv",
+        "sha256": "deabc99551a7806ad5c7daf800d9cddc25e92a752ebb8b1bbf0818e1a342c7ab",
+        "mat": "results/urban_SOCHold.mat",
+        "matSha256": "56024f2591e65c19ac5de97d4d60d4d4bd5324a38e53407f30fb691e8c851c2b"
+      },
+      "file": "data/urban_SOCHold.json",
+      "bytes": 508409,
+      "sha256": "42911c2bcd39ec4caec25e541aeba51810d6122316f437f859431a7bb57520ed",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "urban_ECMS",
+      "scenario": "urban",
+      "scenarioLabel": "城市通勤",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.940520275250165,
+        "RechargeFromGrid_kWh": 1.02230464701105,
+        "SOC_end": 0.800758100772244,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8026073756884,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.3006242425235,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.310861556835868
+      },
+      "source": {
+        "csv": "results/urban_ECMS.csv",
+        "sha256": "deabc99551a7806ad5c7daf800d9cddc25e92a752ebb8b1bbf0818e1a342c7ab",
+        "mat": "results/urban_ECMS.mat",
+        "matSha256": "11e84a0b44864a353c10af2fcf52162ac067c7047c059c26f3a2b1218345e0e1"
+      },
+      "file": "data/urban_ECMS.json",
+      "bytes": 508406,
+      "sha256": "a61277ae825a24620eb00a22ca9a2ed937f64530e42b81fc19032f09ee78fc81",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "express_EVPriority",
+      "scenario": "express",
+      "scenarioLabel": "城市快速路",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 19.6367277050986,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.97837176259074,
+        "RechargeFromGrid_kWh": 2.15040408977255,
+        "SOC_end": 0.74642032656593,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 10.0748545903454,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.95793998298339e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.2840106727523,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.653893108211302
+      },
+      "source": {
+        "csv": "results/express_EVPriority.csv",
+        "sha256": "03282f25d5b6e4a788fac1ee7ac00e62caec7ce9148c94ad59751ea0e336bdd1",
+        "mat": "results/express_EVPriority.mat",
+        "matSha256": "423ef6d4079b40282edc003ea09b31db7118f843027e76e01d381c8dc6c10462"
+      },
+      "file": "data/express_EVPriority.json",
+      "bytes": 551709,
+      "sha256": "5b0f7d4cef88626d8cbee609f4411c5b27cae05ce20a445d0e0b76fbd81bfb93",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 45
+      }
+    },
+    {
+      "id": "express_Rule_Based",
+      "scenario": "express",
+      "scenarioLabel": "城市快速路",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 19.6367277050986,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.97837176259074,
+        "RechargeFromGrid_kWh": 2.15040408977255,
+        "SOC_end": 0.74642032656593,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 10.0748545903454,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.95793998298339e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.2840106727523,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.653893108211302
+      },
+      "source": {
+        "csv": "results/express_Rule_Based.csv",
+        "sha256": "03282f25d5b6e4a788fac1ee7ac00e62caec7ce9148c94ad59751ea0e336bdd1",
+        "mat": "results/express_Rule_Based.mat",
+        "matSha256": "3d46cfa0422572634a2bb7b159d5bf96a5a68ece70f704cbc58da83951e01ffa"
+      },
+      "file": "data/express_Rule_Based.json",
+      "bytes": 551709,
+      "sha256": "e15ba8bce54603d1095cd67af714cdf0dafda44f83b09108f0eeaf7bdd991f63",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 45
+      }
+    },
+    {
+      "id": "express_SOCHold",
+      "scenario": "express",
+      "scenarioLabel": "城市快速路",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 19.6367277050986,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.97837176259074,
+        "RechargeFromGrid_kWh": 2.15040408977255,
+        "SOC_end": 0.74642032656593,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 10.0748545903454,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.95793998298339e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.2840106727523,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.653893108211302
+      },
+      "source": {
+        "csv": "results/express_SOCHold.csv",
+        "sha256": "03282f25d5b6e4a788fac1ee7ac00e62caec7ce9148c94ad59751ea0e336bdd1",
+        "mat": "results/express_SOCHold.mat",
+        "matSha256": "77c46a26e8972350055f249982155cfc758938f9f47e138e7b546cef43680893"
+      },
+      "file": "data/express_SOCHold.json",
+      "bytes": 551697,
+      "sha256": "f20d53958379d66ff8a0a495954ebda586532981f8da52fa90aadc07c23cbbdd",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 45
+      }
+    },
+    {
+      "id": "express_ECMS",
+      "scenario": "express",
+      "scenarioLabel": "城市快速路",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 19.6367277050986,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.97837176259074,
+        "RechargeFromGrid_kWh": 2.15040408977255,
+        "SOC_end": 0.74642032656593,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 10.0748545903454,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.95793998298339e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.2840106727523,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.653893108211302
+      },
+      "source": {
+        "csv": "results/express_ECMS.csv",
+        "sha256": "03282f25d5b6e4a788fac1ee7ac00e62caec7ce9148c94ad59751ea0e336bdd1",
+        "mat": "results/express_ECMS.mat",
+        "matSha256": "6dc3bcb8eb86bc762f84e49291dee647702ffa216d5a17189a1ab1c1531902e9"
+      },
+      "file": "data/express_ECMS.json",
+      "bytes": 551694,
+      "sha256": "616f2a8e38cac2136224ce2993e090645a32007b25ad52fd58977d264f8dcd60",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 45
+      }
+    },
+    {
+      "id": "highway80_EVPriority",
+      "scenario": "highway80",
+      "scenarioLabel": "高速 80 km/h",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 26.0000000000004,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 3.07515439354767,
+        "RechargeFromGrid_kWh": 3.34255912342138,
+        "SOC_end": 0.688997152170277,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8275168982601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4836430952439,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.01640263101678
+      },
+      "source": {
+        "csv": "results/highway80_EVPriority.csv",
+        "sha256": "345aa584c0309f0c7cc7bca6cc3cdc8411eb8750ba2e4a72d1cbc151fb90bb9b",
+        "mat": "results/highway80_EVPriority.mat",
+        "matSha256": "2f9fd38c635f596a684dbdb8755deb370ab5a740e39366956f52c85875672d40"
+      },
+      "file": "data/highway80_EVPriority.json",
+      "bytes": 518029,
+      "sha256": "07b7f1175c817f2dc8479c3328abb8e509aa57c37ba399e03b2a7397f4cd7d67",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 51
+      }
+    },
+    {
+      "id": "highway80_Rule_Based",
+      "scenario": "highway80",
+      "scenarioLabel": "高速 80 km/h",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 26.0000000000004,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 3.07515439354767,
+        "RechargeFromGrid_kWh": 3.34255912342138,
+        "SOC_end": 0.688997152170277,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8275168982601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4836430952439,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.01640263101678
+      },
+      "source": {
+        "csv": "results/highway80_Rule_Based.csv",
+        "sha256": "345aa584c0309f0c7cc7bca6cc3cdc8411eb8750ba2e4a72d1cbc151fb90bb9b",
+        "mat": "results/highway80_Rule_Based.mat",
+        "matSha256": "ab26c0d212c2a0e5bbb6d37e08c96056d7947ba367e2c3f586688aca35ccf11c"
+      },
+      "file": "data/highway80_Rule_Based.json",
+      "bytes": 518029,
+      "sha256": "90eb5347a66dfdc53b4e26686ccc8b5e2b706d26b77da3924235a4acd5092e7b",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 51
+      }
+    },
+    {
+      "id": "highway80_SOCHold",
+      "scenario": "highway80",
+      "scenarioLabel": "高速 80 km/h",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 26.0000000000004,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 3.07515439354767,
+        "RechargeFromGrid_kWh": 3.34255912342138,
+        "SOC_end": 0.688997152170277,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8275168982601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4836430952439,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.01640263101678
+      },
+      "source": {
+        "csv": "results/highway80_SOCHold.csv",
+        "sha256": "345aa584c0309f0c7cc7bca6cc3cdc8411eb8750ba2e4a72d1cbc151fb90bb9b",
+        "mat": "results/highway80_SOCHold.mat",
+        "matSha256": "134cf7e7547a1f2e2f9e3fb67d8b333562bb035b5d7ec3247bc9e4c15ec99d0d"
+      },
+      "file": "data/highway80_SOCHold.json",
+      "bytes": 518017,
+      "sha256": "1d5d45301157831c6eb8eb06011490e9e98dd4eb6a94ab852237eccb3fcfed91",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 51
+      }
+    },
+    {
+      "id": "highway80_ECMS",
+      "scenario": "highway80",
+      "scenarioLabel": "高速 80 km/h",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 26.0000000000004,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 3.07515439354767,
+        "RechargeFromGrid_kWh": 3.34255912342138,
+        "SOC_end": 0.688997152170277,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 11.8275168982601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4836430952439,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.01640263101678
+      },
+      "source": {
+        "csv": "results/highway80_ECMS.csv",
+        "sha256": "345aa584c0309f0c7cc7bca6cc3cdc8411eb8750ba2e4a72d1cbc151fb90bb9b",
+        "mat": "results/highway80_ECMS.mat",
+        "matSha256": "338a6e30471fbe9d7acbc71fa74462707d6b2030d5b34ff988fe698f0cb0eff3"
+      },
+      "file": "data/highway80_ECMS.json",
+      "bytes": 518014,
+      "sha256": "c3651cd194dc159c4f68f86b3692f031050a50de0dfab6b9585db07676209cf9",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 51
+      }
+    },
+    {
+      "id": "highway100_EVPriority",
+      "scenario": "highway100",
+      "scenarioLabel": "高速 100 km/h",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 32.4999999999996,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 4.82311745978548,
+        "RechargeFromGrid_kWh": 5.2425189780277,
+        "SOC_end": 0.597480761267775,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.8403614147247,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 21.1795125035381,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.59414086203764
+      },
+      "source": {
+        "csv": "results/highway100_EVPriority.csv",
+        "sha256": "5256c8ae31514ef47932877339f6a68d06ec4f2ea0b3c77740940928b385bcf2",
+        "mat": "results/highway100_EVPriority.mat",
+        "matSha256": "f7b82d08f227d15a8fc5f741505f5125a92d7d2656f745e53415296c2054b024"
+      },
+      "file": "data/highway100_EVPriority.json",
+      "bytes": 525900,
+      "sha256": "f5cdc5bb47abb1e38f3db9a6a70e3192f0a3ab8b5b77bcf73d941d7bd47934ae",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 46
+      }
+    },
+    {
+      "id": "highway100_Rule_Based",
+      "scenario": "highway100",
+      "scenarioLabel": "高速 100 km/h",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 32.4999999999996,
+        "Fuel_L": 0.0457223309307882,
+        "BatteryNet_kWh": 4.65756587217979,
+        "RechargeFromGrid_kWh": 5.06257160019542,
+        "SOC_end": 0.606148383655509,
+        "Fuel_L100km": 0.140684095171658,
+        "Battery_kWh100km": 14.3309719143995,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.1142638246645,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.58514494221507
+      },
+      "source": {
+        "csv": "results/highway100_Rule_Based.csv",
+        "sha256": "5d8957f9200d8f174e27cb1b7755d6736a87f56d7622032f7a4cdc88473da19c",
+        "mat": "results/highway100_Rule_Based.mat",
+        "matSha256": "66055265dac4e81c3ea1bb32351471f0358a1ba2eec02dcb699f90818c945749"
+      },
+      "file": "data/highway100_Rule_Based.json",
+      "bytes": 549418,
+      "sha256": "3ad531c98a0b00b6c8c18e6e242230487114a0427d4b355b4c99428d3b2ef377",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1194
+      }
+    },
+    {
+      "id": "highway100_SOCHold",
+      "scenario": "highway100",
+      "scenarioLabel": "高速 100 km/h",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 32.4999999999996,
+        "Fuel_L": 0.0416016073298135,
+        "BatteryNet_kWh": 4.67407738712574,
+        "RechargeFromGrid_kWh": 5.08051889904972,
+        "SOC_end": 0.605283906433207,
+        "Fuel_L100km": 0.128004945630197,
+        "Battery_kWh100km": 14.3817765757717,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.1387994300299,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.58648161849891
+      },
+      "source": {
+        "csv": "results/highway100_SOCHold.csv",
+        "sha256": "eda16d07ee6b01916f8fe17679d391996017e8d662a90f1c0883dbcd47c1288a",
+        "mat": "results/highway100_SOCHold.mat",
+        "matSha256": "5cef30096c02147c3fdd53e8c6ad74153dea495521b469779623ac6ccb5fe301"
+      },
+      "file": "data/highway100_SOCHold.json",
+      "bytes": 548362,
+      "sha256": "0431115ad3bb897e2170f956848f6bc1345715363c991580bb346bef5e59c2ac",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1188
+      }
+    },
+    {
+      "id": "highway100_ECMS",
+      "scenario": "highway100",
+      "scenarioLabel": "高速 100 km/h",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 32.4999999999996,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 4.82311745978548,
+        "RechargeFromGrid_kWh": 5.2425189780277,
+        "SOC_end": 0.597480761267775,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.8403614147247,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 21.1795125035381,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.59414086203764
+      },
+      "source": {
+        "csv": "results/highway100_ECMS.csv",
+        "sha256": "5256c8ae31514ef47932877339f6a68d06ec4f2ea0b3c77740940928b385bcf2",
+        "mat": "results/highway100_ECMS.mat",
+        "matSha256": "f04f3e59c787e8196d79f1cf620a8ab81975febd1ad1b94a81d080bc29bf671f"
+      },
+      "file": "data/highway100_ECMS.json",
+      "bytes": 525885,
+      "sha256": "4977c7dc08e14189c0023c2c47269a5d0a22a794bfc016a5bc1e441a3573ee6c",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 46
+      }
+    },
+    {
+      "id": "highway110_EVPriority",
+      "scenario": "highway110",
+      "scenarioLabel": "高速 110 km/h",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 35.7499999999993,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 5.94688113302242,
+        "RechargeFromGrid_kWh": 6.46400123154611,
+        "SOC_end": 0.538644966857466,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 16.6346325399232,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 21.7788116553362,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.96556818175715
+      },
+      "source": {
+        "csv": "results/highway110_EVPriority.csv",
+        "sha256": "eb9212c53eb15d0866ef60f6f73d544227aa36987190418f738c1ab896b4622a",
+        "mat": "results/highway110_EVPriority.mat",
+        "matSha256": "0193448e3248c4b323c089397d6d245ff92e8992b6a68466c4de662601f3d9c9"
+      },
+      "file": "data/highway110_EVPriority.json",
+      "bytes": 519196,
+      "sha256": "e4baaa657244f3b2d770c31764a99a163c3d212f5b27506260a05fd867393852",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 44
+      }
+    },
+    {
+      "id": "highway110_Rule_Based",
+      "scenario": "highway110",
+      "scenarioLabel": "高速 110 km/h",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 35.7499999999993,
+        "Fuel_L": 0.0615240983548995,
+        "BatteryNet_kWh": 5.72185029908454,
+        "RechargeFromGrid_kWh": 6.21940249900493,
+        "SOC_end": 0.550426685911805,
+        "Fuel_L100km": 0.172095380013708,
+        "Battery_kWh100km": 16.0051756617753,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.6539402567875,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.95271489855545
+      },
+      "source": {
+        "csv": "results/highway110_Rule_Based.csv",
+        "sha256": "46ec1f633e358e32a44cc812563a75b86e439293a6d3ceb782e73453e665d953",
+        "mat": "results/highway110_Rule_Based.mat",
+        "matSha256": "9ab670ca0d9ec5ce715cffc9a4a77571864bc6a6e66c3c7e8964304f16c72c14"
+      },
+      "file": "data/highway110_Rule_Based.json",
+      "bytes": 542709,
+      "sha256": "bbcde8dd858ad281488795f428856c8470083f845856b5f4f4c1d8acb2b358f1",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1199
+      }
+    },
+    {
+      "id": "highway110_SOCHold",
+      "scenario": "highway110",
+      "scenarioLabel": "高速 110 km/h",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 35.7499999999993,
+        "Fuel_L": 0.0661950803462636,
+        "BatteryNet_kWh": 5.70525600795762,
+        "RechargeFromGrid_kWh": 6.20136522604089,
+        "SOC_end": 0.55129549696557,
+        "Fuel_L100km": 0.185161063905636,
+        "Battery_kWh100km": 15.9587580642174,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.6673294192214,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.95190112140865
+      },
+      "source": {
+        "csv": "results/highway110_SOCHold.csv",
+        "sha256": "22314ac44dd0dece5b933fbc06d241426065dde8752557336437b47a0f0c81b9",
+        "mat": "results/highway110_SOCHold.mat",
+        "matSha256": "43a8598e9eec88c58610caa99f685e6344d15844a354d21f85ac544c8cd719c7"
+      },
+      "file": "data/highway110_SOCHold.json",
+      "bytes": 542333,
+      "sha256": "049b7972db4b6a2b022768ef7fdb6f8f2eaf3d19c2a55ef73712e1653e3ca10a",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1194
+      }
+    },
+    {
+      "id": "highway110_ECMS",
+      "scenario": "highway110",
+      "scenarioLabel": "高速 110 km/h",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 35.7499999999993,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 5.94688113302242,
+        "RechargeFromGrid_kWh": 6.46400123154611,
+        "SOC_end": 0.538644966857466,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 16.6346325399232,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 21.7788116553362,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.96556818175715
+      },
+      "source": {
+        "csv": "results/highway110_ECMS.csv",
+        "sha256": "eb9212c53eb15d0866ef60f6f73d544227aa36987190418f738c1ab896b4622a",
+        "mat": "results/highway110_ECMS.mat",
+        "matSha256": "46093caff2a36a31a1b7e2cdcc457afea952ca2ebd0b22340eb6df28be9db824"
+      },
+      "file": "data/highway110_ECMS.json",
+      "bytes": 519181,
+      "sha256": "7b4d4077620fac8fba260dc9c5fd1ffb05d990e29aa0ae77dc54700eea138706",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 44
+      }
+    },
+    {
+      "id": "highway120_EVPriority",
+      "scenario": "highway120",
+      "scenarioLabel": "高速 120 km/h",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 39,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 7.2644265932944,
+        "RechargeFromGrid_kWh": 7.89611586227652,
+        "SOC_end": 0.469663529146891,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 18.626734854601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 22.6244406010997,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 2.40104442162156
+      },
+      "source": {
+        "csv": "results/highway120_EVPriority.csv",
+        "sha256": "f93d5f2b8b1b1c1fef18dd04f67885b3dc7bf5c4d9826cc62f4200c0d933c3f3",
+        "mat": "results/highway120_EVPriority.mat",
+        "matSha256": "487b8c31ac90267dac92bf5f37e08cd518ff09dcc118de862957fc98d6107e29"
+      },
+      "file": "data/highway120_EVPriority.json",
+      "bytes": 520301,
+      "sha256": "1d66aa46ea53ed6c28ba331fb476a952a5360566863f80df36c9891c9fc58317",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 42
+      }
+    },
+    {
+      "id": "highway120_Rule_Based",
+      "scenario": "highway120",
+      "scenarioLabel": "高速 120 km/h",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 39,
+        "Fuel_L": 0.0772492011424653,
+        "BatteryNet_kWh": 6.98037125658268,
+        "RechargeFromGrid_kWh": 7.58736006150291,
+        "SOC_end": 0.484535536304572,
+        "Fuel_L100km": 0.19807487472427,
+        "Battery_kWh100km": 17.8983878373915,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 22.4266269129572,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 2.38440741262968
+      },
+      "source": {
+        "csv": "results/highway120_Rule_Based.csv",
+        "sha256": "75ae13a5d4ed2d45e3e064bc7e2d47ff73d4e5db9392a21f449be6503cdb1776",
+        "mat": "results/highway120_Rule_Based.mat",
+        "matSha256": "4b770d356f14399fd7bc0c37774c7cd6e6a3974bd2766396977c4075f743b199"
+      },
+      "file": "data/highway120_Rule_Based.json",
+      "bytes": 543064,
+      "sha256": "578c6c394bdb0f4c00c8097a3536f7918ab8221fc873653da1ac4e5d029bb849",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1200
+      }
+    },
+    {
+      "id": "highway120_SOCHold",
+      "scenario": "highway120",
+      "scenarioLabel": "高速 120 km/h",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 39,
+        "Fuel_L": 0.0899639632847107,
+        "BatteryNet_kWh": 6.93486142336654,
+        "RechargeFromGrid_kWh": 7.53789285148537,
+        "SOC_end": 0.486918250085521,
+        "Fuel_L100km": 0.230676828935156,
+        "Battery_kWh100km": 17.7816959573501,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 22.4317697544402,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 2.38208022620666
+      },
+      "source": {
+        "csv": "results/highway120_SOCHold.csv",
+        "sha256": "3e2baae970f81ae202d724a073084e523da50d313bc09293e3cde891dc469182",
+        "mat": "results/highway120_SOCHold.mat",
+        "matSha256": "94574e481ae4392ff28e7e92083d58d084e7d0d363a63f045a21c39c3d7a7432"
+      },
+      "file": "data/highway120_SOCHold.json",
+      "bytes": 542380,
+      "sha256": "4c3133d2b9be5768914171acc58b377e1ac45c7d051d44e154f741776d06370a",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1198
+      }
+    },
+    {
+      "id": "highway120_ECMS",
+      "scenario": "highway120",
+      "scenarioLabel": "高速 120 km/h",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 39,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 7.2644265932944,
+        "RechargeFromGrid_kWh": 7.89611586227652,
+        "SOC_end": 0.469663529146891,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 18.626734854601,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 0,
+        "Unmet_kWh": 5.05274834318293e-19,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 22.6244406010997,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 2.40104442162156
+      },
+      "source": {
+        "csv": "results/highway120_ECMS.csv",
+        "sha256": "f93d5f2b8b1b1c1fef18dd04f67885b3dc7bf5c4d9826cc62f4200c0d933c3f3",
+        "mat": "results/highway120_ECMS.mat",
+        "matSha256": "b0f0bd30d1a56aabc3fba1dcf613b908674b41b04f7633f06e5e2d7a0e2b7ee3"
+      },
+      "file": "data/highway120_ECMS.json",
+      "bytes": 520286,
+      "sha256": "f2da8a230e7c390150ebaa301a75ed2fa0db7e35d6284237d74268c79e4d38cc",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 42
+      }
+    },
+    {
+      "id": "acceleration_EVPriority",
+      "scenario": "acceleration",
+      "scenarioLabel": "急加速",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.92361111111111,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.399848155108623,
+        "RechargeFromGrid_kWh": 0.434617559900678,
+        "SOC_end": 0.82906554161735,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 20.7863300850692,
+        "Regen_kWh": 0.258175780806247,
+        "RegenFraction": 0.722154843037367,
+        "EngineStarts": 0,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 20.7829017252701,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.132158150404525
+      },
+      "source": {
+        "csv": "results/acceleration_EVPriority.csv",
+        "sha256": "a266d1142c3c170616d3ea05209a9abff120b263c8e209812ffb0c66b3da872c",
+        "mat": "results/acceleration_EVPriority.mat",
+        "matSha256": "eb80b1f39a8baa13780a8d86e03f92783a72adda378ec52fcf7e3bc5ce70b187"
+      },
+      "file": "data/acceleration_EVPriority.json",
+      "bytes": 55501,
+      "sha256": "0de08dae6ff0a91c5a56224510da91b6dace8badb4f6bd944edef4f6ac25802e",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 38
+      }
+    },
+    {
+      "id": "acceleration_Rule_Based",
+      "scenario": "acceleration",
+      "scenarioLabel": "急加速",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.92361111111111,
+        "Fuel_L": 0.107256524688389,
+        "BatteryNet_kWh": 0.00485407086160781,
+        "RechargeFromGrid_kWh": 0.00527616398000848,
+        "SOC_end": 0.849745860164314,
+        "Fuel_L100km": 5.5757904531148,
+        "Battery_kWh100km": 0.252341589917518,
+        "Regen_kWh": 0.258175780806247,
+        "RegenFraction": 0.722154843037367,
+        "EngineStarts": 2,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 2.91038304567337e-11,
+        "BatteryTempMax_C": 20.2449176601809,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.108860896294976
+      },
+      "source": {
+        "csv": "results/acceleration_Rule_Based.csv",
+        "sha256": "be84fcd106662c1a955082b811efc40112de607c74366f96934dc9378434d88a",
+        "mat": "results/acceleration_Rule_Based.mat",
+        "matSha256": "9c772d989f49594b99a472a905d3db7cd381e9ec4747be5fd66f9faa4232da1b"
+      },
+      "file": "data/acceleration_Rule_Based.json",
+      "bytes": 60048,
+      "sha256": "413fe7e880416a804d7821a928f257d289d885798d04dc6880c737b31674978c",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 120
+      }
+    },
+    {
+      "id": "acceleration_SOCHold",
+      "scenario": "acceleration",
+      "scenarioLabel": "急加速",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.92361111111111,
+        "Fuel_L": 0.103446363259375,
+        "BatteryNet_kWh": 0.0197790816813433,
+        "RechargeFromGrid_kWh": 0.021499001827547,
+        "SOC_end": 0.84896444598527,
+        "Fuel_L100km": 5.37771707918774,
+        "Battery_kWh100km": 1.02822662892182,
+        "Regen_kWh": 0.258175780806247,
+        "RegenFraction": 0.722154843037367,
+        "EngineStarts": 2,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 2.91038304567337e-11,
+        "BatteryTempMax_C": 20.2572480599506,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.10998376206517
+      },
+      "source": {
+        "csv": "results/acceleration_SOCHold.csv",
+        "sha256": "b7e2f57283307810cc3754658d4f448f58ae70dc01dc8f2fc822fec71f32a540",
+        "mat": "results/acceleration_SOCHold.mat",
+        "matSha256": "c7fc88ccc25a235d924254968df115b0542499ade37523fe72026d553caf9dae"
+      },
+      "file": "data/acceleration_SOCHold.json",
+      "bytes": 60042,
+      "sha256": "b490e06a4bd5ac23a57264f9ff6001e3e88656d70aabe09f6e5387741d938650",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 120
+      }
+    },
+    {
+      "id": "acceleration_ECMS",
+      "scenario": "acceleration",
+      "scenarioLabel": "急加速",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.92361111111111,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.399848155108623,
+        "RechargeFromGrid_kWh": 0.434617559900678,
+        "SOC_end": 0.82906554161735,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 20.7863300850692,
+        "Regen_kWh": 0.258175780806247,
+        "RegenFraction": 0.722154843037367,
+        "EngineStarts": 0,
+        "Unmet_kWh": 2.02109933727317e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 20.7829017252701,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.132158150404525
+      },
+      "source": {
+        "csv": "results/acceleration_ECMS.csv",
+        "sha256": "a266d1142c3c170616d3ea05209a9abff120b263c8e209812ffb0c66b3da872c",
+        "mat": "results/acceleration_ECMS.mat",
+        "matSha256": "697263f3565e4adc6ad21dcdf9dd49148d885bca836c723e73bcbd69680e9876"
+      },
+      "file": "data/acceleration_ECMS.json",
+      "bytes": 55486,
+      "sha256": "3c7c56f46e3d0a937cc37f0df781e1d5cda7ce1d523ef77672e1d73d93448bc2",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 38
+      }
+    },
+    {
+      "id": "braking_EVPriority",
+      "scenario": "braking",
+      "scenarioLabel": "减速制动",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.33333333333333,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.219117593779298,
+        "RechargeFromGrid_kWh": 0.238171297586194,
+        "SOC_end": 0.838527874671241,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 16.4338195334474,
+        "Regen_kWh": 0.121682352022428,
+        "RegenFraction": 0.695299629060338,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 20.2212473611719,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.0724229324181707
+      },
+      "source": {
+        "csv": "results/braking_EVPriority.csv",
+        "sha256": "756db1038d0ada040b8e457e74f4720c830c74daffedded5f8c3cf052b531889",
+        "mat": "results/braking_EVPriority.mat",
+        "matSha256": "a8f9a4dcfdbdd96528101920e037422b44c182f925e0e159748fa16addffb59b"
+      },
+      "file": "data/braking_EVPriority.json",
+      "bytes": 53699,
+      "sha256": "48f27fee802166dbf5360f1ea5214d7af0ef90b4fb95743d4b65b0832ec7a1fc",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 32
+      }
+    },
+    {
+      "id": "braking_Rule_Based",
+      "scenario": "braking",
+      "scenarioLabel": "减速制动",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.33333333333333,
+        "Fuel_L": 0.0476584286936556,
+        "BatteryNet_kWh": 0.0486478596402954,
+        "RechargeFromGrid_kWh": 0.0528781083046689,
+        "SOC_end": 0.84745299164187,
+        "Fuel_L100km": 3.57438215202417,
+        "Battery_kWh100km": 3.64858947302215,
+        "Regen_kWh": 0.121682352022428,
+        "RegenFraction": 0.695299629060338,
+        "EngineStarts": 1,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 20.1257789716132,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.0637375604066775
+      },
+      "source": {
+        "csv": "results/braking_Rule_Based.csv",
+        "sha256": "bd7ac3f29be8bd25253a49a14fb9b00347d2f72247cb5ea27938a793a2989dfd",
+        "mat": "results/braking_Rule_Based.mat",
+        "matSha256": "59f82765b325906d6225f08079e510c8d3f1bc3572f0a6bb1d16879cca15dcdb"
+      },
+      "file": "data/braking_Rule_Based.json",
+      "bytes": 58265,
+      "sha256": "e388521f0a6bbe224151a67e146a377365c61307b1da4a31be83aa7888a636b0",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 120
+      }
+    },
+    {
+      "id": "braking_SOCHold",
+      "scenario": "braking",
+      "scenarioLabel": "减速制动",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.33333333333333,
+        "Fuel_L": 0.0455058969851276,
+        "BatteryNet_kWh": 0.0573061624038611,
+        "RechargeFromGrid_kWh": 0.0622893069607186,
+        "SOC_end": 0.846999677361054,
+        "Fuel_L100km": 3.41294227388457,
+        "Battery_kWh100km": 4.29796218028959,
+        "Regen_kWh": 0.121682352022428,
+        "RegenFraction": 0.695299629060338,
+        "EngineStarts": 1,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 20.1383461511898,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.0644467782504624
+      },
+      "source": {
+        "csv": "results/braking_SOCHold.csv",
+        "sha256": "bc47edab5e92e690594107060bb5f01fb2f001eb83b5837a5e6e5d4e71a0d05c",
+        "mat": "results/braking_SOCHold.mat",
+        "matSha256": "8697d7b05238a9142dc719fdc96fcb83c0f01c6bf2ae774e0725b0abdf1aa15e"
+      },
+      "file": "data/braking_SOCHold.json",
+      "bytes": 58142,
+      "sha256": "86d1928abf51051ff50f54b71dad2dc0952b369da6c7ec51261b3c8b1b8602bb",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 120
+      }
+    },
+    {
+      "id": "braking_ECMS",
+      "scenario": "braking",
+      "scenarioLabel": "减速制动",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 120,
+      "startTime_s": 0,
+      "endTime_s": 119,
+      "sampleInterval_s": 1,
+      "sampleCount": 120,
+      "summary": {
+        "Distance_km": 1.33333333333333,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 0.219117593779298,
+        "RechargeFromGrid_kWh": 0.238171297586194,
+        "SOC_end": 0.838527874671241,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 16.4338195334474,
+        "Regen_kWh": 0.121682352022428,
+        "RegenFraction": 0.695299629060338,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 20.2212473611719,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.0724229324181707
+      },
+      "source": {
+        "csv": "results/braking_ECMS.csv",
+        "sha256": "756db1038d0ada040b8e457e74f4720c830c74daffedded5f8c3cf052b531889",
+        "mat": "results/braking_ECMS.mat",
+        "matSha256": "35e387eb901d7ee12613cee13288d289dc4378cd0b9d711668f1c209eb270291"
+      },
+      "file": "data/braking_ECMS.json",
+      "bytes": 53684,
+      "sha256": "eb52315e98fc37e3bfcc61566de7cb7be2238e0690a77afc8ac453cafe87396f",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 32
+      }
+    },
+    {
+      "id": "mountain_EVPriority",
+      "scenario": "mountain",
+      "scenarioLabel": "山区道路",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 16.3312817999436,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.40890409365852,
+        "RechargeFromGrid_kWh": 2.61837401484622,
+        "SOC_end": 0.723879366824163,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.7502451011949,
+        "Regen_kWh": 0.549884397384931,
+        "RegenFraction": 0.713345187285543,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.02949747492352e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.774485945717,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.796193018405483
+      },
+      "source": {
+        "csv": "results/mountain_EVPriority.csv",
+        "sha256": "9236d13b452beccddc07bf2fa5391d562c246ec20635cf6262d1d717978e6406",
+        "mat": "results/mountain_EVPriority.mat",
+        "matSha256": "bac42e009b23921430427e1c4510d6f64d15fa419af3a6ca4964c8bff1e4c509"
+      },
+      "file": "data/mountain_EVPriority.json",
+      "bytes": 598352,
+      "sha256": "4e5d2e536c4dfacffe8004e6ebb8c5814b88a5c2f1caa79ae7297339b29075ec",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 53
+      }
+    },
+    {
+      "id": "mountain_Rule_Based",
+      "scenario": "mountain",
+      "scenarioLabel": "山区道路",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 16.3312817999436,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.40890409365852,
+        "RechargeFromGrid_kWh": 2.61837401484622,
+        "SOC_end": 0.723879366824163,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.7502451011949,
+        "Regen_kWh": 0.549884397384931,
+        "RegenFraction": 0.713345187285543,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.02949747492352e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.774485945717,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.796193018405483
+      },
+      "source": {
+        "csv": "results/mountain_Rule_Based.csv",
+        "sha256": "9236d13b452beccddc07bf2fa5391d562c246ec20635cf6262d1d717978e6406",
+        "mat": "results/mountain_Rule_Based.mat",
+        "matSha256": "dca0dcb1169d4f3253265389b460772fe1788f6ab253f7937fbdd5cde04d7448"
+      },
+      "file": "data/mountain_Rule_Based.json",
+      "bytes": 598352,
+      "sha256": "afa3f3dcc6ae92845b17cda1514ba10a23c3fd4c16b13b8673e9eda6f04e8e6d",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 53
+      }
+    },
+    {
+      "id": "mountain_SOCHold",
+      "scenario": "mountain",
+      "scenarioLabel": "山区道路",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 16.3312817999436,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.40890409365852,
+        "RechargeFromGrid_kWh": 2.61837401484622,
+        "SOC_end": 0.723879366824163,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.7502451011949,
+        "Regen_kWh": 0.549884397384931,
+        "RegenFraction": 0.713345187285543,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.02949747492352e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.774485945717,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.796193018405483
+      },
+      "source": {
+        "csv": "results/mountain_SOCHold.csv",
+        "sha256": "9236d13b452beccddc07bf2fa5391d562c246ec20635cf6262d1d717978e6406",
+        "mat": "results/mountain_SOCHold.mat",
+        "matSha256": "154370d3514609b6c871ef125faed00ec617f276294aedcb77b0a0c9cef4d32b"
+      },
+      "file": "data/mountain_SOCHold.json",
+      "bytes": 598340,
+      "sha256": "fdec3f7d6e048a574e3a14ca11255b9cf5aa8ab8384a4772ecf1542e85451bdc",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 53
+      }
+    },
+    {
+      "id": "mountain_ECMS",
+      "scenario": "mountain",
+      "scenarioLabel": "山区道路",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 16.3312817999436,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.40890409365852,
+        "RechargeFromGrid_kWh": 2.61837401484622,
+        "SOC_end": 0.723879366824163,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 14.7502451011949,
+        "Regen_kWh": 0.549884397384931,
+        "RegenFraction": 0.713345187285543,
+        "EngineStarts": 0,
+        "Unmet_kWh": 1.02949747492352e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.774485945717,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.796193018405483
+      },
+      "source": {
+        "csv": "results/mountain_ECMS.csv",
+        "sha256": "9236d13b452beccddc07bf2fa5391d562c246ec20635cf6262d1d717978e6406",
+        "mat": "results/mountain_ECMS.mat",
+        "matSha256": "e4fabe893dfcf967018a92093231d75874ad681321408efa943eefde78d94f82"
+      },
+      "file": "data/mountain_ECMS.json",
+      "bytes": 598337,
+      "sha256": "6e799e31d6811205e38d6b2daac8f43243eb82768015116133a80e7d5a8cdd54",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 53
+      }
+    },
+    {
+      "id": "winterMinus10_EVPriority",
+      "scenario": "winterMinus10",
+      "scenarioLabel": "冬季 −10°C",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": false,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0.012111384755078,
+        "BatteryNet_kWh": 2.35758400545951,
+        "RechargeFromGrid_kWh": 2.56259131028207,
+        "SOC_end": 0.726566282436676,
+        "Fuel_L100km": 0.151986004769607,
+        "Battery_kWh100km": 29.5853679116487,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 1,
+        "Unmet_kWh": 0.000156236678947432,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": -2.93111510433616,
+        "DemandFulfilledFraction": 0.999854150780934,
+        "Feasible": 0,
+        "EqualizedFuelDiagnostic_L": 0.79134204420423
+      },
+      "source": {
+        "csv": "results/winterMinus10_EVPriority.csv",
+        "sha256": "1fe268d15691e39061a085a0320a2c9ee976fb9a4128f0948e955eca2e2fbe83",
+        "mat": "results/winterMinus10_EVPriority.mat",
+        "matSha256": "ed150024cbcb594a55bcdf6b177dd7082314b6544791860f3db43d349e888983"
+      },
+      "file": "data/winterMinus10_EVPriority.json",
+      "bytes": 529409,
+      "sha256": "42b4b9413a61c6c552f3ae31c36613ee2b8ad6e67f834094853dc1767e5eb054",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1111
+      }
+    },
+    {
+      "id": "winterMinus10_Rule_Based",
+      "scenario": "winterMinus10",
+      "scenarioLabel": "冬季 −10°C",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": false,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.37538730679428,
+        "RechargeFromGrid_kWh": 2.58194272477639,
+        "SOC_end": 0.725634172419147,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 29.8087818891831,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0.0016558860565898,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": -2.9174224891264,
+        "DemandFulfilledFraction": 0.998454206209178,
+        "Feasible": 0,
+        "EqualizedFuelDiagnostic_L": 0.78511502166375
+      },
+      "source": {
+        "csv": "results/winterMinus10_Rule_Based.csv",
+        "sha256": "d0826100e63aaf200b7edfdeb77908c9ecb992551a464b3151df9f264f33a8e0",
+        "mat": "results/winterMinus10_Rule_Based.mat",
+        "matSha256": "597705071c69f689cf76d19a30bd4375b1b5f2638daa635a7976a2fd86e4ddf1"
+      },
+      "file": "data/winterMinus10_Rule_Based.json",
+      "bytes": 497608,
+      "sha256": "e53924eb4cecbd3dcdc1a5860e3c5266e2dbd76e89d8cfe4a204a1479353127f",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1111
+      }
+    },
+    {
+      "id": "winterMinus10_SOCHold",
+      "scenario": "winterMinus10",
+      "scenarioLabel": "冬季 −10°C",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": false,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 2.37538730679428,
+        "RechargeFromGrid_kWh": 2.58194272477639,
+        "SOC_end": 0.725634172419147,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 29.8087818891831,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0.0016558860565898,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": -2.9174224891264,
+        "DemandFulfilledFraction": 0.998454206209178,
+        "Feasible": 0,
+        "EqualizedFuelDiagnostic_L": 0.78511502166375
+      },
+      "source": {
+        "csv": "results/winterMinus10_SOCHold.csv",
+        "sha256": "d0826100e63aaf200b7edfdeb77908c9ecb992551a464b3151df9f264f33a8e0",
+        "mat": "results/winterMinus10_SOCHold.mat",
+        "matSha256": "d0111fcac0d1e62839029fa42431de3c6fa39f791f325ef1cb775bc0e6880340"
+      },
+      "file": "data/winterMinus10_SOCHold.json",
+      "bytes": 497596,
+      "sha256": "23ae701305d3848ee84811997052f7d5db292c4133bcb9be515e0b4f9a80bd1a",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1111
+      }
+    },
+    {
+      "id": "winterMinus10_ECMS",
+      "scenario": "winterMinus10",
+      "scenarioLabel": "冬季 −10°C",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0.016320209358994,
+        "BatteryNet_kWh": 2.3693131650896,
+        "RechargeFromGrid_kWh": 2.57534039683652,
+        "SOC_end": 0.725952190309443,
+        "Fuel_L100km": 0.204802627250121,
+        "Battery_kWh100km": 29.7325573658303,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 2,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": -2.92488799044345,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.799427600569212
+      },
+      "source": {
+        "csv": "results/winterMinus10_ECMS.csv",
+        "sha256": "dfe6c07f9ec9f6e7ae6383582c578133f8decb5ecdeb0170427e9ccd64ceafdc",
+        "mat": "results/winterMinus10_ECMS.mat",
+        "matSha256": "f7c160406ec74d11bfbbdc6e43bd5bc554eae6351597946e173fcda70df9b919"
+      },
+      "file": "data/winterMinus10_ECMS.json",
+      "bytes": 529987,
+      "sha256": "7cb8587d8757085d8f2e824926c96ee29b2c322db798e2ce80174ad52621af30",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1111
+      }
+    },
+    {
+      "id": "winter0_EVPriority",
+      "scenario": "winter0",
+      "scenarioLabel": "冬季 0°C",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.91779415046521,
+        "RechargeFromGrid_kWh": 2.08455885920132,
+        "SOC_end": 0.749591929295016,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 24.0664363979948,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 5.03368155388609,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.633870944617079
+      },
+      "source": {
+        "csv": "results/winter0_EVPriority.csv",
+        "sha256": "5472614a7a25b1ad7d6abe24adab164bd1cdf752f3e9feb80155742a3ec74f88",
+        "mat": "results/winter0_EVPriority.mat",
+        "matSha256": "438b76a7f41af7c35672755fcd25f28a367edcc8b49877911adacc27288ba919"
+      },
+      "file": "data/winter0_EVPriority.json",
+      "bytes": 508237,
+      "sha256": "37dbff58d80eeeb0786d9b074e92aa21bafbea6e9f87e9ced4606c732d7659d6",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "winter0_Rule_Based",
+      "scenario": "winter0",
+      "scenarioLabel": "冬季 0°C",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.91779415046521,
+        "RechargeFromGrid_kWh": 2.08455885920132,
+        "SOC_end": 0.749591929295016,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 24.0664363979948,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 5.03368155388609,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.633870944617079
+      },
+      "source": {
+        "csv": "results/winter0_Rule_Based.csv",
+        "sha256": "5472614a7a25b1ad7d6abe24adab164bd1cdf752f3e9feb80155742a3ec74f88",
+        "mat": "results/winter0_Rule_Based.mat",
+        "matSha256": "b1029c68c49a9452dab9d93180e64a39f4ca198d00bc9e6087c6591d414fee37"
+      },
+      "file": "data/winter0_Rule_Based.json",
+      "bytes": 508237,
+      "sha256": "a3c86dd347f5566de8d52ec4c0d3c9b206bb4bf91f45c9a553fb73b53a18ea7c",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "winter0_SOCHold",
+      "scenario": "winter0",
+      "scenarioLabel": "冬季 0°C",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.91779415046521,
+        "RechargeFromGrid_kWh": 2.08455885920132,
+        "SOC_end": 0.749591929295016,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 24.0664363979948,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 5.03368155388609,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.633870944617079
+      },
+      "source": {
+        "csv": "results/winter0_SOCHold.csv",
+        "sha256": "5472614a7a25b1ad7d6abe24adab164bd1cdf752f3e9feb80155742a3ec74f88",
+        "mat": "results/winter0_SOCHold.mat",
+        "matSha256": "e4dfca7138fd6df59bcbb53fca54d728df32a024ad3efb9419afd69ff0c3cb23"
+      },
+      "file": "data/winter0_SOCHold.json",
+      "bytes": 508225,
+      "sha256": "f0ea8f778123093fd3f273b3ab86f5eca4b136d6a694ba5a3054e9980d426376",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "winter0_ECMS",
+      "scenario": "winter0",
+      "scenarioLabel": "冬季 0°C",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.91779415046521,
+        "RechargeFromGrid_kWh": 2.08455885920132,
+        "SOC_end": 0.749591929295016,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 24.0664363979948,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 5.03368155388609,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.633870944617079
+      },
+      "source": {
+        "csv": "results/winter0_ECMS.csv",
+        "sha256": "5472614a7a25b1ad7d6abe24adab164bd1cdf752f3e9feb80155742a3ec74f88",
+        "mat": "results/winter0_ECMS.mat",
+        "matSha256": "e360c8f36ea5cdfb456d5488f4f9111140eb991c37bc61df0ee74d568d6aa579"
+      },
+      "file": "data/winter0_ECMS.json",
+      "bytes": 508222,
+      "sha256": "cd89fbd5e918a38f433d4ae4d177bdcd2d3c691a75c7ae61fac86d7d224a8ca3",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer30_EVPriority",
+      "scenario": "summer30",
+      "scenarioLabel": "夏季 30°C",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.20003403515513,
+        "RechargeFromGrid_kWh": 1.30438482082079,
+        "SOC_end": 0.78717099292382,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 15.0592506372408,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 30.2929980803294,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.396636264247602
+      },
+      "source": {
+        "csv": "results/summer30_EVPriority.csv",
+        "sha256": "4fdfadd1efc7af01b93c0f572b2e1cbdc38eaf3fd433b8722d275c3ac87814d9",
+        "mat": "results/summer30_EVPriority.mat",
+        "matSha256": "4c0d4b64503878203c9e9499cc76af8618dd2c6effcc77340fba418ee95ed550"
+      },
+      "file": "data/summer30_EVPriority.json",
+      "bytes": 509255,
+      "sha256": "59466c376b7ee983d502589a53a9f415e3cb04bade9f0bf91742a273940727c3",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer30_Rule_Based",
+      "scenario": "summer30",
+      "scenarioLabel": "夏季 30°C",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.20003403515513,
+        "RechargeFromGrid_kWh": 1.30438482082079,
+        "SOC_end": 0.78717099292382,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 15.0592506372408,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 30.2929980803294,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.396636264247602
+      },
+      "source": {
+        "csv": "results/summer30_Rule_Based.csv",
+        "sha256": "4fdfadd1efc7af01b93c0f572b2e1cbdc38eaf3fd433b8722d275c3ac87814d9",
+        "mat": "results/summer30_Rule_Based.mat",
+        "matSha256": "5ae06edbdcffa98d256a05d92ca0ce02490326428b7f5f22e47fcdbabf63b6c3"
+      },
+      "file": "data/summer30_Rule_Based.json",
+      "bytes": 509255,
+      "sha256": "83b6688b88abe5bb601be348d98e7a1abc492bedbea42b6aaf9765c89e624003",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer30_SOCHold",
+      "scenario": "summer30",
+      "scenarioLabel": "夏季 30°C",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.20003403515513,
+        "RechargeFromGrid_kWh": 1.30438482082079,
+        "SOC_end": 0.78717099292382,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 15.0592506372408,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 30.2929980803294,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.396636264247602
+      },
+      "source": {
+        "csv": "results/summer30_SOCHold.csv",
+        "sha256": "4fdfadd1efc7af01b93c0f572b2e1cbdc38eaf3fd433b8722d275c3ac87814d9",
+        "mat": "results/summer30_SOCHold.mat",
+        "matSha256": "fa1fcc51737d3eb0528563cc9321bf1ec55b20278bfc76faff6e3e44852a1421"
+      },
+      "file": "data/summer30_SOCHold.json",
+      "bytes": 509243,
+      "sha256": "6adecb92c54888b63351aaf03ee6d9b8ada94fbc55a997e1af7960492ede2ce7",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer30_ECMS",
+      "scenario": "summer30",
+      "scenarioLabel": "夏季 30°C",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.20003403515513,
+        "RechargeFromGrid_kWh": 1.30438482082079,
+        "SOC_end": 0.78717099292382,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 15.0592506372408,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 30.2929980803294,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.396636264247602
+      },
+      "source": {
+        "csv": "results/summer30_ECMS.csv",
+        "sha256": "4fdfadd1efc7af01b93c0f572b2e1cbdc38eaf3fd433b8722d275c3ac87814d9",
+        "mat": "results/summer30_ECMS.mat",
+        "matSha256": "07e65bc1e6dcdc8e3b81f985c045ae1941167e2424dbcad3ab27494ff237a39f"
+      },
+      "file": "data/summer30_ECMS.json",
+      "bytes": 509240,
+      "sha256": "7e94bc0f9bd3584c6aa7edb02a300d4e74c44854d1fcaa9760a48af3bda473a2",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer35_EVPriority",
+      "scenario": "summer35",
+      "scenarioLabel": "夏季 35°C",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.41837104259394,
+        "RechargeFromGrid_kWh": 1.54170765499341,
+        "SOC_end": 0.775739735989863,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 17.7991660247082,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 35.3189129428265,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.468801196608321
+      },
+      "source": {
+        "csv": "results/summer35_EVPriority.csv",
+        "sha256": "0f1d403aeca6b063cef65026080c87c579f2beaedabfa382003b95fc9173b8ac",
+        "mat": "results/summer35_EVPriority.mat",
+        "matSha256": "b5f85da70675e738e074c2d26a2981bb2114eeacfa4393b78dc2b556d695b5f0"
+      },
+      "file": "data/summer35_EVPriority.json",
+      "bytes": 513962,
+      "sha256": "3eee86a9b2a9711c573db55471343f5b30b1d112123d839611077301f30a51e4",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer35_Rule_Based",
+      "scenario": "summer35",
+      "scenarioLabel": "夏季 35°C",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.41837104259394,
+        "RechargeFromGrid_kWh": 1.54170765499341,
+        "SOC_end": 0.775739735989863,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 17.7991660247082,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 35.3189129428265,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.468801196608321
+      },
+      "source": {
+        "csv": "results/summer35_Rule_Based.csv",
+        "sha256": "0f1d403aeca6b063cef65026080c87c579f2beaedabfa382003b95fc9173b8ac",
+        "mat": "results/summer35_Rule_Based.mat",
+        "matSha256": "68dd6e17b4a72c27192ae87606236c5dabffa97298249482fc9cd776c05078a8"
+      },
+      "file": "data/summer35_Rule_Based.json",
+      "bytes": 513962,
+      "sha256": "284b38bfb2e6098bc96f5fd6f30346ea54cc2592acd97a661e005162cec3864b",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer35_SOCHold",
+      "scenario": "summer35",
+      "scenarioLabel": "夏季 35°C",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.41837104259394,
+        "RechargeFromGrid_kWh": 1.54170765499341,
+        "SOC_end": 0.775739735989863,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 17.7991660247082,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 35.3189129428265,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.468801196608321
+      },
+      "source": {
+        "csv": "results/summer35_SOCHold.csv",
+        "sha256": "0f1d403aeca6b063cef65026080c87c579f2beaedabfa382003b95fc9173b8ac",
+        "mat": "results/summer35_SOCHold.mat",
+        "matSha256": "674ca6bcc372d7d31799c657ecfa9068582f8997b0561e0e34ed33055f6cc6a9"
+      },
+      "file": "data/summer35_SOCHold.json",
+      "bytes": 513950,
+      "sha256": "2211dbb08cfbf4e8e5ad54ff8caf9551088a7692f51dcf85da719ee0be94663f",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "summer35_ECMS",
+      "scenario": "summer35",
+      "scenarioLabel": "夏季 35°C",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.41837104259394,
+        "RechargeFromGrid_kWh": 1.54170765499341,
+        "SOC_end": 0.775739735989863,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 17.7991660247082,
+        "Regen_kWh": 0.413227483339955,
+        "RegenFraction": 0.712184771309712,
+        "EngineStarts": 0,
+        "Unmet_kWh": 3.03164900590976e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 35.3189129428265,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.468801196608321
+      },
+      "source": {
+        "csv": "results/summer35_ECMS.csv",
+        "sha256": "0f1d403aeca6b063cef65026080c87c579f2beaedabfa382003b95fc9173b8ac",
+        "mat": "results/summer35_ECMS.mat",
+        "matSha256": "4ae13413ebadc2e104d87564b1e18083c66aea215a69fed211731d993b661c82"
+      },
+      "file": "data/summer35_ECMS.json",
+      "bytes": 513947,
+      "sha256": "2d3a113053b693629a33bda348a850f1d3aee15fa9a25e9d80ed09b180bc609a",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "fullLoad_EVPriority",
+      "scenario": "fullLoad",
+      "scenarioLabel": "满载行驶",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.0581759377926,
+        "RechargeFromGrid_kWh": 1.15019123673109,
+        "SOC_end": 0.794598118440176,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 13.2790705919072,
+        "Regen_kWh": 0.484928403661386,
+        "RegenFraction": 0.713219849491753,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4024656707734,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.349749205928568
+      },
+      "source": {
+        "csv": "results/fullLoad_EVPriority.csv",
+        "sha256": "20675f26a415380487e394099d669bcd9dce9f91555433970fc9984d11e31182",
+        "mat": "results/fullLoad_EVPriority.mat",
+        "matSha256": "1b30fb2887ec5a8ac72528f7b1477e0508c678430e09b76873b3bc9c2e1b749a"
+      },
+      "file": "data/fullLoad_EVPriority.json",
+      "bytes": 506936,
+      "sha256": "9327aeaf2fa9f5f965d2da04ae7d1c3e2ab4caea03721f3850fe91bf5d840f47",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "fullLoad_Rule_Based",
+      "scenario": "fullLoad",
+      "scenarioLabel": "满载行驶",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.0581759377926,
+        "RechargeFromGrid_kWh": 1.15019123673109,
+        "SOC_end": 0.794598118440176,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 13.2790705919072,
+        "Regen_kWh": 0.484928403661386,
+        "RegenFraction": 0.713219849491753,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4024656707734,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.349749205928568
+      },
+      "source": {
+        "csv": "results/fullLoad_Rule_Based.csv",
+        "sha256": "20675f26a415380487e394099d669bcd9dce9f91555433970fc9984d11e31182",
+        "mat": "results/fullLoad_Rule_Based.mat",
+        "matSha256": "ce6e1c0480e362e52ac0028216939abb6fedc57ce69c0426973f27ff44f32d5b"
+      },
+      "file": "data/fullLoad_Rule_Based.json",
+      "bytes": 506936,
+      "sha256": "73bc25422002fbe06fc2fc97e62c384371155958aa024f5dc30b01f5ac382852",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "fullLoad_SOCHold",
+      "scenario": "fullLoad",
+      "scenarioLabel": "满载行驶",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.0581759377926,
+        "RechargeFromGrid_kWh": 1.15019123673109,
+        "SOC_end": 0.794598118440176,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 13.2790705919072,
+        "Regen_kWh": 0.484928403661386,
+        "RegenFraction": 0.713219849491753,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4024656707734,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.349749205928568
+      },
+      "source": {
+        "csv": "results/fullLoad_SOCHold.csv",
+        "sha256": "20675f26a415380487e394099d669bcd9dce9f91555433970fc9984d11e31182",
+        "mat": "results/fullLoad_SOCHold.mat",
+        "matSha256": "9561359304bbad8f141a431c5103be101d0f0d9b7a4d0c937cdb4693266b3e37"
+      },
+      "file": "data/fullLoad_SOCHold.json",
+      "bytes": 506924,
+      "sha256": "dc291aa0617b7a23a0ff6d635c353b63a7f346721d2b97b8c877bcc3043bc0e9",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "fullLoad_ECMS",
+      "scenario": "fullLoad",
+      "scenarioLabel": "满载行驶",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 1200,
+      "startTime_s": 0,
+      "endTime_s": 1199,
+      "sampleInterval_s": 1,
+      "sampleCount": 1200,
+      "summary": {
+        "Distance_km": 7.96875,
+        "Fuel_L": 0,
+        "BatteryNet_kWh": 1.0581759377926,
+        "RechargeFromGrid_kWh": 1.15019123673109,
+        "SOC_end": 0.794598118440176,
+        "Fuel_L100km": 0,
+        "Battery_kWh100km": 13.2790705919072,
+        "Regen_kWh": 0.484928403661386,
+        "RegenFraction": 0.713219849491753,
+        "EngineStarts": 0,
+        "Unmet_kWh": 0,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 3.63797880709171e-12,
+        "BatteryTempMax_C": 20.4024656707734,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 0.349749205928568
+      },
+      "source": {
+        "csv": "results/fullLoad_ECMS.csv",
+        "sha256": "20675f26a415380487e394099d669bcd9dce9f91555433970fc9984d11e31182",
+        "mat": "results/fullLoad_ECMS.mat",
+        "matSha256": "061a797801d21f7e6f642afd66d8906ca1f4c2cc7dfc70d63d8b0660d457d256"
+      },
+      "file": "data/fullLoad_ECMS.json",
+      "bytes": 506921,
+      "sha256": "72967c66e4f0ae59655ec45c4a16720791d61491fee31750ac8e3b9580ebbb4b",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 67
+      }
+    },
+    {
+      "id": "longTrip_EVPriority",
+      "scenario": "longTrip",
+      "scenarioLabel": "长途混动",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 14400,
+      "startTime_s": 0,
+      "endTime_s": 14399,
+      "sampleInterval_s": 1,
+      "sampleCount": 14400,
+      "summary": {
+        "Distance_km": 379.052919832567,
+        "Fuel_L": 12.1052337720876,
+        "BatteryNet_kWh": 11.261879810731,
+        "RechargeFromGrid_kWh": 12.2411737073164,
+        "SOC_end": 0.260372784778484,
+        "Fuel_L100km": 3.19354716418875,
+        "Battery_kWh100km": 2.97105739634075,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 12,
+        "Unmet_kWh": 1.71288168833901e-16,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 2.18278728425503e-11,
+        "BatteryTempMax_C": 23.3348005982934,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 15.8275198120468
+      },
+      "source": {
+        "csv": "results/longTrip_EVPriority.csv",
+        "sha256": "fb81eb8f3f134b3f05ee8d2f6fe89ac0b97b9192245d1076954e0d41954352bc",
+        "mat": "results/longTrip_EVPriority.mat",
+        "matSha256": "d1aaecb5bf3547dbe49716edbe162a11ff07ae173249afd937696347a446b13c"
+      },
+      "file": "data/longTrip_EVPriority.json",
+      "bytes": 7255329,
+      "sha256": "e562667bca6c94ec92a686bd0328ca4c5b6d01eb7ccc41c7e5e1378ae174d0aa",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 11217
+      }
+    },
+    {
+      "id": "longTrip_Rule_Based",
+      "scenario": "longTrip",
+      "scenarioLabel": "长途混动",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 14400,
+      "startTime_s": 0,
+      "endTime_s": 14399,
+      "sampleInterval_s": 1,
+      "sampleCount": 14400,
+      "summary": {
+        "Distance_km": 379.052919832567,
+        "Fuel_L": 12.7057233442625,
+        "BatteryNet_kWh": 9.08895265482118,
+        "RechargeFromGrid_kWh": 9.87929636393606,
+        "SOC_end": 0.374138604459625,
+        "Fuel_L100km": 3.35196556456412,
+        "Battery_kWh100km": 2.3978057361584,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 12,
+        "Unmet_kWh": 1.62445859233331e-16,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 23.3094977175121,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 15.7098116628622
+      },
+      "source": {
+        "csv": "results/longTrip_Rule_Based.csv",
+        "sha256": "461278e5de102e48c79ce1d6769bf2f240f629b57f00490b57e9bdad8023b614",
+        "mat": "results/longTrip_Rule_Based.mat",
+        "matSha256": "ba5dfbaa5468b4fdb753085ea16f3dc53a744e0dd7996bc76dd79ddd69e3f5b7"
+      },
+      "file": "data/longTrip_Rule_Based.json",
+      "bytes": 7326692,
+      "sha256": "ae7602e7b1139b3df641a6a0ee390205f502d6a6766db61766acb9af8e0aa2ff",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 14388
+      }
+    },
+    {
+      "id": "longTrip_SOCHold",
+      "scenario": "longTrip",
+      "scenarioLabel": "长途混动",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 14400,
+      "startTime_s": 0,
+      "endTime_s": 14399,
+      "sampleInterval_s": 1,
+      "sampleCount": 14400,
+      "summary": {
+        "Distance_km": 379.052919832567,
+        "Fuel_L": 11.94416122463,
+        "BatteryNet_kWh": 9.55405175333484,
+        "RechargeFromGrid_kWh": 10.3848388623205,
+        "SOC_end": 0.349787866317549,
+        "Fuel_L100km": 3.15105374466076,
+        "Battery_kWh100km": 2.52050604373527,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 2,
+        "Unmet_kWh": 4.26957234998958e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 21.9525168984981,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 15.1019744906356
+      },
+      "source": {
+        "csv": "results/longTrip_SOCHold.csv",
+        "sha256": "f3b636cd7f745df6584c35a8e5e723bd43f0fcbfb883ac5bd0dfbcef169cf8ed",
+        "mat": "results/longTrip_SOCHold.mat",
+        "matSha256": "220922de51d3216bbcde1670114aca8f94a20d0d8964c47c7ed7d95c55bd49f0"
+      },
+      "file": "data/longTrip_SOCHold.json",
+      "bytes": 7665579,
+      "sha256": "a432c30e0e13759c34211bfe774141324ce71a84c702c5e59cebf137516537b8",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 14381
+      }
+    },
+    {
+      "id": "longTrip_ECMS",
+      "scenario": "longTrip",
+      "scenarioLabel": "长途混动",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 14400,
+      "startTime_s": 0,
+      "endTime_s": 14399,
+      "sampleInterval_s": 1,
+      "sampleCount": 14400,
+      "summary": {
+        "Distance_km": 379.052919832567,
+        "Fuel_L": 11.8220236796916,
+        "BatteryNet_kWh": 9.95511591412555,
+        "RechargeFromGrid_kWh": 10.8207781675278,
+        "SOC_end": 0.328789742715941,
+        "Fuel_L100km": 3.118831978636,
+        "Battery_kWh100km": 2.62631294820862,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 7.25069387246751e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 22.1687614345035,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 15.1123970113281
+      },
+      "source": {
+        "csv": "results/longTrip_ECMS.csv",
+        "sha256": "ceebf3a35e927534f9359c936f5175f604012385ad96d7718690c62d1005e7fd",
+        "mat": "results/longTrip_ECMS.mat",
+        "matSha256": "6052d8b3c76aac2280f83e30630630fb99d447b939db9a671d689d3b55693b99"
+      },
+      "file": "data/longTrip_ECMS.json",
+      "bytes": 7007363,
+      "sha256": "1d8c2289f271272c4a5e874c6305f19fc069709b1474a1c18febfa2771921bbe",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 11649
+      }
+    },
+    {
+      "id": "socHold_EVPriority",
+      "scenario": "socHold",
+      "scenarioLabel": "电量保持",
+      "strategy": "EVPriority",
+      "strategyLabel": "纯电优先",
+      "feasible": true,
+      "duration_s": 3600,
+      "startTime_s": 0,
+      "endTime_s": 3599,
+      "sampleInterval_s": 1,
+      "sampleCount": 3600,
+      "summary": {
+        "Distance_km": 59.6367277050988,
+        "Fuel_L": 0.632032309386275,
+        "BatteryNet_kWh": 3.81073278331986,
+        "RechargeFromGrid_kWh": 4.14210085143463,
+        "SOC_end": 0.250485194590583,
+        "Fuel_L100km": 1.05980380498348,
+        "Battery_kWh100km": 6.38990925552418,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 2.80111736275204e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 20.8515916744442,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.89155893191783
+      },
+      "source": {
+        "csv": "results/socHold_EVPriority.csv",
+        "sha256": "593841cf77a05548ccf57917b03e7bf78ba09d4bd05eeeb3858f314656712a53",
+        "mat": "results/socHold_EVPriority.mat",
+        "matSha256": "657f9f42544873d7d1694dc7010bf9dd8e84b03c0ef1a3ce9ae4199c1a44f9c8"
+      },
+      "file": "data/socHold_EVPriority.json",
+      "bytes": 1696312,
+      "sha256": "aade1955ded515e2f724695228e4cef094806f982bdec9aca84f735d24f493b5",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 948
+      }
+    },
+    {
+      "id": "socHold_Rule_Based",
+      "scenario": "socHold",
+      "scenarioLabel": "电量保持",
+      "strategy": "Rule_Based",
+      "strategyLabel": "规则控制",
+      "feasible": true,
+      "duration_s": 3600,
+      "startTime_s": 0,
+      "endTime_s": 3599,
+      "sampleInterval_s": 1,
+      "sampleCount": 3600,
+      "summary": {
+        "Distance_km": 59.6367277050988,
+        "Fuel_L": 1.34993548189602,
+        "BatteryNet_kWh": 1.50717526050475,
+        "RechargeFromGrid_kWh": 1.63823397880951,
+        "SOC_end": 0.371090300497131,
+        "Fuel_L100km": 2.26359750751484,
+        "Battery_kWh100km": 2.52726016081511,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 2,
+        "Unmet_kWh": 5.7443432726561e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.0599071521708,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.84808832371583
+      },
+      "source": {
+        "csv": "results/socHold_Rule_Based.csv",
+        "sha256": "487716164e14a750c6f916e05e4ea4974fc4368cfbe1e86e7d02d8956c37feba",
+        "mat": "results/socHold_Rule_Based.mat",
+        "matSha256": "bb05d7c3924db56897f0716209aea9d3bf0e162a5ddd469ba7a5515454e40dc4"
+      },
+      "file": "data/socHold_Rule_Based.json",
+      "bytes": 1742083,
+      "sha256": "6a073cdcab32dc0b5344847d68ff87cbc5240abbad546f19d3a5d472e2e57cd3",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 1884
+      }
+    },
+    {
+      "id": "socHold_SOCHold",
+      "scenario": "socHold",
+      "scenarioLabel": "电量保持",
+      "strategy": "SOCHold",
+      "strategyLabel": "电量保持",
+      "feasible": true,
+      "duration_s": 3600,
+      "startTime_s": 0,
+      "endTime_s": 3599,
+      "sampleInterval_s": 1,
+      "sampleCount": 3600,
+      "summary": {
+        "Distance_km": 59.6367277050988,
+        "Fuel_L": 1.71967482516092,
+        "BatteryNet_kWh": 0.00409239150936867,
+        "RechargeFromGrid_kWh": 0.00444825164061812,
+        "SOC_end": 0.449785738664431,
+        "Fuel_L100km": 2.88358347504351,
+        "Battery_kWh100km": 0.00686219996778727,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 1,
+        "Unmet_kWh": 7.42122412904994e-18,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 7.27595761418343e-12,
+        "BatteryTempMax_C": 20.0748432469908,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.7210274458638
+      },
+      "source": {
+        "csv": "results/socHold_SOCHold.csv",
+        "sha256": "0888eb6f5d7a38f0807b0253a4dc7a281aa8a4d9e1877520539b7848e1797170",
+        "mat": "results/socHold_SOCHold.mat",
+        "matSha256": "ffc856d0fd280a9fadb45dafad9e875a241430a5fca460b2b341216f708bb51c"
+      },
+      "file": "data/socHold_SOCHold.json",
+      "bytes": 1957284,
+      "sha256": "154323a8d678b6eaa0c5effce522f7f8b4f8feb96332500f222ea1c0c97d7328",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 3581
+      }
+    },
+    {
+      "id": "socHold_ECMS",
+      "scenario": "socHold",
+      "scenarioLabel": "电量保持",
+      "strategy": "ECMS",
+      "strategyLabel": "等效燃油最小化",
+      "feasible": true,
+      "duration_s": 3600,
+      "startTime_s": 0,
+      "endTime_s": 3599,
+      "sampleInterval_s": 1,
+      "sampleCount": 3600,
+      "summary": {
+        "Distance_km": 59.6367277050988,
+        "Fuel_L": 1.46495983388395,
+        "BatteryNet_kWh": 0.997573493542672,
+        "RechargeFromGrid_kWh": 1.0843190147203,
+        "SOC_end": 0.397771021280488,
+        "Fuel_L100km": 2.45647253002901,
+        "Battery_kWh100km": 1.67275021942121,
+        "Regen_kWh": 0,
+        "RegenFraction": 0,
+        "EngineStarts": 6,
+        "Unmet_kWh": 5.93066336781097e-17,
+        "AuxUnmet_kWh": 0,
+        "MaxBalance_W": 1.45519152283669e-11,
+        "BatteryTempMax_C": 21.4952013328835,
+        "DemandFulfilledFraction": 1,
+        "Feasible": 1,
+        "EqualizedFuelDiagnostic_L": 1.79467866868354
+      },
+      "source": {
+        "csv": "results/socHold_ECMS.csv",
+        "sha256": "02bcceaa68f10ee503ab0b855d333d356eb065a17dc694dca4065cc615bae2d5",
+        "mat": "results/socHold_ECMS.mat",
+        "matSha256": "20c4b0a626c4295e46b1cf4cfc7e73144cc43bb6099de100e2d438da6f3fe2bf"
+      },
+      "file": "data/socHold_ECMS.json",
+      "bytes": 1748910,
+      "sha256": "5b5051a656f34a723eccdf73b321789d710c7886f35b5a976a60aadb5536ab60",
+      "nonFiniteByField": {
+        "EstimatedEVRange_km": 3049
+      }
+    }
+  ]
+}

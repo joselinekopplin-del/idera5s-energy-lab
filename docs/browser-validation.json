@@ -1,0 +1,254 @@
+{
+  "date": "2026-11-05T07:01:47.731Z",
+  "command": "pnpm test:browser",
+  "browserChannel": "msedge",
+  "headless": true,
+  "desktopViewport": [
+    1440,
+    1000
+  ],
+  "mobileEmulationViewport": [
+    390,
+    844
+  ],
+  "stats": {
+    "startTime": "2026-11-05T07:01:47.731Z",
+    "duration": 30559.397999999997,
+    "expected": 12,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "long saved-result playback records FPS and bounded GPU resources",
+      "project": "desktop",
+      "status": "skipped",
+      "duration_ms": 413
+    },
+    {
+      "title": "homepage loads real GLB and lazily requests only one saved result",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1712
+    },
+    {
+      "title": "real mouse drag rotates, wheel zooms and pointer interaction stops autorotation",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 3156
+    },
+    {
+      "title": "five paints, five lamp states, studio and all preset views change actual renderer state",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1764
+    },
+    {
+      "title": "light, dark and system themes, keyboard focus and help dialog work",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1906
+    },
+    {
+      "title": "shell, exploded parts and actual raycast selection display saved component values",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 3065
+    },
+    {
+      "title": "saved braking playback, wheel motion, reversed recovery arrows and synchronized chart cursors",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 2139
+    },
+    {
+      "title": "three infeasible winter strategies remain marked and ECMS remains feasible",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1782
+    },
+    {
+      "title": "strategy analysis loads all four real runs, switches charts and can reopen a chosen replay",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 1974
+    },
+    {
+      "title": "hash routes survive refresh and requested local resources return no HTTP errors",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 2549
+    },
+    {
+      "title": "LOD switches stabilize GPU geometry and texture counts without growing each cycle",
+      "project": "desktop",
+      "status": "passed",
+      "duration_ms": 3009
+    },
+    {
+      "title": "mobile layout, genuine touch orbit and two-finger pinch, low LOD and replay controls",
+      "project": "mobile-touch",
+      "status": "passed",
+      "duration_ms": 2774
+    },
+    {
+      "title": "reduced-motion preference disables automatic rotation",
+      "project": "mobile-touch",
+      "status": "passed",
+      "duration_ms": 1452
+    }
+  ],
+  "initial": {
+    "quality": "standard",
+    "loadMs": 98.80000001192093,
+    "fps": 59.52380952380968,
+    "frameCount": 13,
+    "drawCalls": 40,
+    "triangles": 143881,
+    "geometries": 55,
+    "textures": 4,
+    "programs": 6,
+    "canvas": [
+      1264,
+      420
+    ],
+    "dpr": 1,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "heap": 31783174
+  },
+  "lodCycles": [
+    {
+      "quality": "high",
+      "loadMs": 48,
+      "fps": 59.88023952095813,
+      "frameCount": 42,
+      "drawCalls": 40,
+      "triangles": 311182,
+      "geometries": 55,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 54379410
+    },
+    {
+      "quality": "low",
+      "loadMs": 15.199999988079071,
+      "fps": 59.88023952095833,
+      "frameCount": 59,
+      "drawCalls": 35,
+      "triangles": 53601,
+      "geometries": 52,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 59441527
+    },
+    {
+      "quality": "standard",
+      "loadMs": 16.099999994039536,
+      "fps": 59.88023952095792,
+      "frameCount": 76,
+      "drawCalls": 40,
+      "triangles": 143881,
+      "geometries": 55,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 65574500
+    },
+    {
+      "quality": "high",
+      "loadMs": 22.900000005960464,
+      "fps": 59.88023952095792,
+      "frameCount": 99,
+      "drawCalls": 40,
+      "triangles": 311182,
+      "geometries": 55,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 90253831
+    },
+    {
+      "quality": "low",
+      "loadMs": 9.299999982118607,
+      "fps": 59.88023952095833,
+      "frameCount": 116,
+      "drawCalls": 35,
+      "triangles": 53601,
+      "geometries": 52,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 50654719
+    },
+    {
+      "quality": "standard",
+      "loadMs": 14.300000011920929,
+      "fps": 59.88023952095833,
+      "frameCount": 134,
+      "drawCalls": 40,
+      "triangles": 143881,
+      "geometries": 55,
+      "textures": 4,
+      "programs": 6,
+      "canvas": [
+        1264,
+        420
+      ],
+      "dpr": 1,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "heap": 54419232
+    }
+  ],
+  "mobileEmulation": {
+    "quality": "low",
+    "loadMs": 87,
+    "fps": 59.88023952095874,
+    "frameCount": 74,
+    "drawCalls": 35,
+    "triangles": 53601,
+    "geometries": 52,
+    "textures": 4,
+    "programs": 6,
+    "canvas": [
+      356,
+      370
+    ],
+    "dpr": 1,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "heap": 25598044
+  },
+  "limits": [
+    "Development server on localhost; not an online deployment verification.",
+    "Short functional checks include video instrumentation; use a separate sustained run for performance conclusions.",
+    "Mobile tests emulate touch and viewport on the desktop GPU; no physical phone was measured.",
+    "The 120-second sustained replay test is intentionally excluded from this functional suite."
+  ]
+}

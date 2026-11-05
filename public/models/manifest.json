@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "version": "neo-exterior-2.0.0",
+  "coordinateSystem": "metres; +X forward, +Y left, +Z up",
+  "origin": "Independent procedural geometry authored from publicly viewable Neo reference photographs; no source photograph or third-party CAD is redistributed.",
+  "referenceSources": [
+    "https://www.autohome.com.cn/cars/imglist-x-x-8651-78803-1-x-x-x-x-1.html",
+    "https://www.12365auto.com/xcdg/20260926/576354.shtml"
+  ],
+  "referencePhotoIds": [
+    13402347,
+    13402346,
+    13402344,
+    13402343,
+    13402342,
+    13402315,
+    13402320
+  ],
+  "models": [
+    {
+      "quality": "high",
+      "file": "vehicle-high.glb",
+      "bytes": 6504120,
+      "sha256": "f18272ac4dbf5151d136c99c6f037bf8820adc2a7f5e29ad3b059dcd9cf89d97",
+      "triangles": 311102,
+      "vertices": 167286,
+      "drawPrimitives": 39,
+      "uniqueMeshes": 27,
+      "invalidNormals": 0,
+      "bounds": {
+        "min": [
+          -2.4179999828338623,
+          -1.1269999742507935,
+          -5.102157585312739e-9
+        ],
+        "max": [
+          2.4179999828338623,
+          1.1269999742507935,
+          1.5049999952316284
+        ]
+      },
+      "paintBounds": {
+        "min": [
+          -2.406712770462036,
+          -0.9399999976158142,
+          0.2370000034570694
+        ],
+        "max": [
+          2.4052278995513916,
+          0.9399999976158142,
+          1.5049999952316284
+        ]
+      },
+      "nominal": {
+        "length": 4.836,
+        "width": 1.88,
+        "height": 1.505,
+        "wheelbase": 2.766,
+        "wheelRadius": 0.33965,
+        "rimRadius": 0.2159
+      },
+      "bodyLength": 4.835999965667725,
+      "bodyWidth": 1.8799999952316284,
+      "height": 1.505000000333786,
+      "sourceSurfacePieces": 600
+    },
+    {
+      "quality": "standard",
+      "file": "vehicle-standard.glb",
+      "bytes": 3037456,
+      "sha256": "b4e7a10e5476f1501d0a1487911b4d66004560ccff49f76d0280ec1f9f85cb26",
+      "triangles": 143801,
+      "vertices": 79762,
+      "drawPrimitives": 39,
+      "uniqueMeshes": 27,
+      "invalidNormals": 0,
+      "bounds": {
+        "min": [
+          -2.4179999828338623,
+          -1.1269999742507935,
+          -5.102157585312739e-9
+        ],
+        "max": [
+          2.4179999828338623,
+          1.1269999742507935,
+          1.5049999952316284
+        ]
+      },
+      "paintBounds": {
+        "min": [
+          -2.4068503379821777,
+          -0.9399999976158142,
+          0.2370000034570694
+        ],
+        "max": [
+          2.405245542526245,
+          0.9399999976158142,
+          1.5049999952316284
+        ]
+      },
+      "nominal": {
+        "length": 4.836,
+        "width": 1.88,
+        "height": 1.505,
+        "wheelbase": 2.766,
+        "wheelRadius": 0.33965,
+        "rimRadius": 0.2159
+      },
+      "bodyLength": 4.835999965667725,
+      "bodyWidth": 1.8799999952316284,
+      "height": 1.505000000333786,
+      "sourceSurfacePieces": 472
+    },
+    {
+      "quality": "low",
+      "file": "vehicle-low.glb",
+      "bytes": 1141840,
+      "sha256": "3b7788d803fa5eff4a7d81bba77bb9ff80d1a7545a7080510a8446648aa73d62",
+      "triangles": 53521,
+      "vertices": 30552,
+      "drawPrimitives": 34,
+      "uniqueMeshes": 24,
+      "invalidNormals": 0,
+      "bounds": {
+        "min": [
+          -2.4179999828338623,
+          -1.1269999742507935,
+          -5.102157585312739e-9
+        ],
+        "max": [
+          2.4179999828338623,
+          1.1269999742507935,
+          1.5049999952316284
+        ]
+      },
+      "paintBounds": {
+        "min": [
+          -2.40681791305542,
+          -0.9399999976158142,
+          0.2370000034570694
+        ],
+        "max": [
+          2.4052164554595947,
+          0.9399999976158142,
+          1.5049999952316284
+        ]
+      },
+      "nominal": {
+        "length": 4.836,
+        "width": 1.88,
+        "height": 1.505,
+        "wheelbase": 2.766,
+        "wheelRadius": 0.33965,
+        "rimRadius": 0.2159
+      },
+      "bodyLength": 4.835999965667725,
+      "bodyWidth": 1.8799999952316284,
+      "height": 1.505000000333786,
+      "sourceSurfacePieces": 207
+    }
+  ],
+  "limitations": [
+    "Reference-informed visual reconstruction, not factory CAD or scanned geometry.",
+    "Paint colours, body curvature, lamps and tyre deformation are visual approximations.",
+    "Neo centre light bar and VW logos remain passive.",
+    "Width excludes mirrors; nominal tyre radius is unladen."
+  ],
+  "validation": {
+    "finiteUnitNormals": true,
+    "nominalDimensions": true,
+    "negativeScaleNodes": false
+  }
+}
